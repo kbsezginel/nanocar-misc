@@ -6,6 +6,7 @@ Python library for designing molecular cars.
 ## Usage
 
 ### Wheels
+![alt text][Fig1]
 Several molecular wheels are available in nanocar library.
 - [C60]
 - [Carborane]
@@ -19,3 +20,4 @@ Experimental and hypothetical molecular chassis are available in nanocar library
 [C60]: https://en.wikipedia.org/wiki/Buckminsterfullerene
 [Adamantane]: https://en.wikipedia.org/wiki/Adamantane
 [Triptycene]: https://en.wikipedia.org/wiki/Triptycene
+[Fig1]: https://github.com/kbsezginel/Nanocar/blob/master/docs/figures/wheels.png
