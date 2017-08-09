@@ -5,6 +5,10 @@ title: Nanocar
 # Nanocar
 Python library for designing molecular cars.
 
+## Navigation
+- [Lammps setup for simulations][lammps-setup]
+- [Pyrene on rigid wall][rigid-wall]
+
 ## Installation
 
 ## Usage
@@ -24,10 +28,10 @@ Experimental and hypothetical molecular chassis are available in nanocar library
 Nanocars can be assembled by selecting a chassis and set of wheels.
 <p align="center"> <img src="img/nanocar-build.PNG"> </p>
 
-
+-------------------------------------------------------------------------------------------
 [Carborane]: https://en.wikipedia.org/wiki/Carborane
 [C60]: https://en.wikipedia.org/wiki/Buckminsterfullerene
 [Adamantane]: https://en.wikipedia.org/wiki/Adamantane
 [Triptycene]: https://en.wikipedia.org/wiki/Triptycene
-[Fig1]: https://github.com/kbsezginel/Nanocar/blob/master/docs/figures/wheels.png
-[Fig2]: https://github.com/kbsezginel/Nanocar/blob/master/docs/figures/nanocar-build.PNG
+[rigid-wall]: https://kbsezginel.github.io/Nanocar/rigid-wall
+[lammps-setup]: https://kbsezginel.github.io/Nanocar/lammps-setup
