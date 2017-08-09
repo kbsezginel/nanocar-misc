@@ -1,4 +1,5 @@
-# Motion of molecules on surfaces
+# Lammps setup
+Motion of molecules on surfaces
 
 ## Pyrene
 Initial tests are performed using pyrene molecules since it's relatively small and rigid.
