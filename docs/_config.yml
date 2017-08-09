@@ -1,4 +1,5 @@
 theme: jekyll-theme-tactile
-
+description: "Molecular cars"
+baseurl: /nanocar
 include:
   - _pages
