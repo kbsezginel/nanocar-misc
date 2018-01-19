@@ -1,0 +1,126 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC).
+# 
+# Full information about CCDC data access policies and citation 
+# guidelines are available at http://www.ccdc.cam.ac.uk/access/V1 
+# 
+# Audit and citation data items may have been added by the CCDC. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+
+data_TONLEN
+#This CIF has been generated from an entry in the Cambridge Structural Database
+_database_code_depnum_ccdc_archive 'CCDC 1273926'
+_database_code_CSD               TONLEN
+loop_
+_citation_id
+_citation_doi
+_citation_year
+1 10.1021/cm00033a029 1993
+_audit_creation_method           'Created from the CSD'
+_audit_update_record             
+;
+2018-01-19 downloaded from the CCDC.
+;
+_database_code_NBS               673163
+_chemical_formula_moiety         'C36 H18'
+_chemical_name_systematic        Decacyclene
+_chemical_absolute_configuration unk
+_diffrn_ambient_temperature      295
+_exptl_crystal_density_diffrn    1.435
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt           0.0686
+_refine_ls_wR_factor_gt          0.0686
+_diffrn_radiation_probe          x-ray
+_symmetry_cell_setting           orthorhombic
+_symmetry_space_group_name_H-M   'C 2 2 21'
+_symmetry_Int_Tables_number      20
+_space_group_name_Hall           'C 2n 2'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,-y,1/2+z
+3 x,-y,-z
+4 -x,y,1/2-z
+5 1/2+x,1/2+y,z
+6 1/2-x,1/2-y,1/2+z
+7 1/2+x,1/2-y,-z
+8 1/2-x,1/2+y,1/2-z
+_cell_length_a                   3.944(2)
+_cell_length_b                   25.430(8)
+_cell_length_c                   20.795(8)
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_volume                     2085.65
+_exptl_crystal_colour            orange
+_chemical_melting_point          394-396deg.C
+_cell_formula_units_Z            4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+C1 C 0.1521(21) -0.1544(2) 0.6740(3)
+C2 C 0.0861(22) -0.2077(2) 0.6703(3)
+C3 C 0.1987(25) -0.2358(2) 0.6156(3)
+C4 C 0.3699(24) -0.2130(3) 0.5670(3)
+C5 C 0.4410(26) -0.1583(3) 0.5680(3)
+C6 C 0.6095(24) -0.1289(3) 0.5212(3)
+C7 C 0.6496(22) -0.0756(3) 0.5288(3)
+C8 C 0.5232(22) -0.0478(3) 0.5825(3)
+C9 C 0.3370(21) -0.0753(2) 0.6288(2)
+C10 C 0.3150(23) -0.1308(2) 0.6213(3)
+C11 C 0.0724(18) -0.1116(2) 0.7203(2)
+C12 C 0.1634(22) -0.0627(2) 0.6891(2)
+C13 C 0.0760(20) -0.0153(2) 0.7186(2)
+C14 C 0.1097(22) 0.0397(2) 0.6976(3)
+C15 C 0.1899(22) 0.0660(2) 0.6410(3)
+C16 C 0.1875(23) 0.1213(2) 0.6401(3)
+C17 C 0.1019(26) 0.1511(2) 0.6923(3)
+C18 C 0.0000 0.1259(3) 0.7500
+C19 C 0.0000 0.0705(3) 0.7500
+H1 H -0.0338 -0.2253 0.7042
+H2 H 0.1511 -0.2728 0.6131
+H3 H 0.4445 -0.2339 0.5313
+H4 H 0.6975 -0.1460 0.4835
+H5 H 0.7689 -0.0563 0.4962
+H6 H 0.5644 -0.0108 0.5872
+H7 H 0.2465 0.0466 0.6029
+H8 H 0.2488 0.1389 0.6010
+H9 H 0.1108 0.1888 0.6900
+C11C C -0.0724(18) -0.1116(2) 0.7797(2)
+C1C C -0.1521(21) -0.1544(2) 0.8260(3)
+C2C C -0.0861(22) -0.2077(2) 0.8297(3)
+C3C C -0.1987(25) -0.2358(2) 0.8844(3)
+C4C C -0.3699(24) -0.2130(3) 0.9330(3)
+C5C C -0.4410(26) -0.1583(3) 0.9320(3)
+C6C C -0.6095(24) -0.1289(3) 0.9788(3)
+C7C C -0.6496(22) -0.0756(3) 0.9712(3)
+C8C C -0.5232(22) -0.0478(3) 0.9175(3)
+C9C C -0.3370(21) -0.0753(2) 0.8712(2)
+C10C C -0.3150(23) -0.1308(2) 0.8787(3)
+C12C C -0.1634(22) -0.0627(2) 0.8109(2)
+C13C C -0.0760(20) -0.0153(2) 0.7814(2)
+C17C C -0.1019(26) 0.1511(2) 0.8077(3)
+C16C C -0.1875(23) 0.1213(2) 0.8599(3)
+C15C C -0.1899(22) 0.0660(2) 0.8590(3)
+C14C C -0.1097(22) 0.0397(2) 0.8024(3)
+H7C H -0.2465 0.0466 0.8971
+H8C H -0.2488 0.1389 0.8990
+H9C H -0.1108 0.1888 0.8100
+H6C H -0.5644 -0.0108 0.9128
+H5C H -0.7689 -0.0563 1.0038
+H4C H -0.6975 -0.1460 1.0165
+H3C H -0.4445 -0.2339 0.9687
+H2C H -0.1511 -0.2728 0.8869
+H1C H 0.0338 -0.2253 0.7958
+
+#END
