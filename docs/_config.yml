@@ -1,4 +1,3 @@
 theme: jekyll-theme-minimal
+title: "Nanocar"
 description: "Molecular cars"
-include:
-  - _pages
