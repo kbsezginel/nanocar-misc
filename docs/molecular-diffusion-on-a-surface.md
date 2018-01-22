@@ -78,3 +78,18 @@ temperature range.
     <th><a href="https://doi.org/10.1103/PhysRevB.64.161403">3</a></th>
   </tr>
 </table>
+
+
+## Surfaces
+
+### Copper (110) | COD: 9011604
+
+```
+Space Group: 	F m -3 m | (a, b, c): 3.597 Å | (α, β, γ): 90°
+```
+
+### Palladium (110) | COD: 1011110
+
+```
+Space Group: 	F m -3 m | (a, b, c): 3.908 Å | (α, β, γ): 90°
+```
