@@ -24,8 +24,8 @@ temperature range.
   <th>HtBDC</th>
 </tr>
   <tr>
-  <th><iframe style="width: 500px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=67448&bg=white"></iframe></th>
-  <th><iframe style="width: 500px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=15467576&bg=white"></iframe></th>
+  <th><iframe style="width: 300px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=67448&bg=white"></iframe></th>
+  <th><iframe style="width: 300px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=15467576&bg=white"></iframe></th>
 </tr>
 </table>
 
