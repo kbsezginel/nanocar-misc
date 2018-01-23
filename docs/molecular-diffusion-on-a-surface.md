@@ -81,6 +81,8 @@ temperature range.
 
 
 ## Surfaces
+The metal surfaces considered here are constructured using [ASE](https://wiki.fysik.dtu.dk/ase/).
+Take a look at the [Jupyter Notebook](https://github.com/kbsezginel/Nanocar/blob/master/molecules/surfaces/metal-surfaces.ipynb) for more info.
 
 ### Copper (110) | COD: 9011604
 
