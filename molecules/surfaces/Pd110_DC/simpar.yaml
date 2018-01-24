@@ -1,0 +1,130 @@
+job:
+  cluster: mpi
+  input: in.Pd110_DC
+  lmpdir: /ihome/cwilmer/pab135/workspace/lammps-hf-h2p/src/lmp_mpi
+  name: Pd110_DC
+  nodes: 2
+  output: lammps_out.txt
+  ppn: 28
+  prefix: job
+  queue: idist_big
+  scheduler: slurm
+  walltime: '12:00:00'
+  zfsdir: /zfs1/7/cwilmer/kbs37/Lammps
+lammps:
+  bulk_moduli: false
+  cif_file: Pd110_DC.cif
+  cutoff: 12.5
+  deposit: 0
+  dont_replicate_molecules: false
+  dreid_bond_type: harmonic
+  dump_dcd: 0
+  dump_lammpstrj: 0
+  dump_xyz: 0
+  fix_metal: false
+  force_field: UFF
+  h_bonding: false
+  insert_molecule: ''
+  iter_count: 10
+  max_dev: 0.01
+  minimize: false
+  mol_ff: UFF
+  neighbour_size: 5
+  neqstp: 200000
+  nprodstp: 200000
+  npt: false
+  nvt: false
+  orthogonalize: false
+  output_cif: false
+  output_raspa: false
+  pressure: 1.0
+  random_vel: false
+  replication: 1 1 1
+  restart: false
+  temp: 298.0
+  thermal_scaling: false
+  tol: 0.4
+thermof:
+  atom_list:
+  - Pd
+  - C
+  - H
+  correlation_length: 20000
+  dt: 0.5
+  dump_modify: null
+  dump_xyz: 10000
+  fix:
+  - NVT
+  kpar:
+    average: true
+    conv: 69443.84
+    dt: 5
+    fix: null
+    isotropic: true
+    kb: 0.0019872
+    log_file: log.Pd110_DC
+    prefix: J0Jt_t
+    read_info: false
+    read_thermo: false
+    read_thexp: false
+    read_walltime: false
+    t0: 5
+    t1: 10
+    temp: 298.0
+    thermo_style: &id001
+    - step
+    - temp
+    - press
+    - pe
+    - etotal
+    - vol
+    - lx
+    - ly
+    - lz
+    - pxx
+    - pyy
+    - pzz
+    - pxy
+    - pxz
+    - pyz
+    thexp_file: thermal_expansion.csv
+    traj: traj.xyz
+    volume: 27565.941287280013
+  min:
+    edif: 1.0e-06
+    etol: 1.0e-15
+    ftol: 1.0e-15
+    maxeval: 100000
+    maxiter: 10000
+    restart: false
+  min_cell_size: null
+  mof:
+    name: Pd110_DC
+    replication:
+    - 1
+    - 1
+    - 1
+    volume: 27565.941287280013
+  npt:
+    pdamp: 1000
+    restart: false
+    steps: 500000
+    tdamp: 100
+  nve:
+    equilibration: 300000
+    restart: false
+    steps: 1000000
+  nvt:
+    restart: false
+    steps: 1000000
+  sample_interval: 5
+  seed: 123456
+  temperature: 298.0
+  thermo: 10000
+  thermo_style: *id001
+  thexp:
+    file: thermal_expansion.csv
+    pdamp: 1000
+    print: 10
+    steps: 200000
+    tdamp: 100
