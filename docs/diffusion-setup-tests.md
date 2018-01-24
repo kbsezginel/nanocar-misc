@@ -18,12 +18,24 @@ Leaving additional `~5 Å` above decacylene the simulation box has a size of `35
 <div style="height: 300px; width: 500px;"
   class='viewer_3Dmoljs' data-datatype='xyz'
   data-backgroundcolor='0xffffff'
-  data-href='/mol/Pd110_DC.xyz'
+  data-href='mol/Pd110_DC.xyz'
   data-style='stick'>
 </div>
 
 ### Box size
 
+#### 2 nm
+<p align="center"> <img src="img/dc-pd110-z20.gif" width="100%"> </p>
+
+#### 3 nm
+<p align="center"> <img src="img/dc-pd110-z30.gif" width="100%"> </p>
+
+#### 4 nm
+<p align="center"> <img src="img/dc-pd110-z40.gif" width="100%"> </p>
+
+#### 5 nm
+<p align="center"> <img src="img/dc-pd110-z50.gif" width="100%"> </p>
+
 #### Displacement
 
-<p align="center"> <img src="/img/dc-pd110-boxsize.png" width="100%"> </p>
+<p align="center"> <img src="img/dc-pd110-boxsize.png" width="100%"> </p>
