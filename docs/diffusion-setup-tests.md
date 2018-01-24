@@ -21,3 +21,9 @@ Leaving additional `~5 Å` above decacylene the simulation box has a size of `35
   data-href='/mol/Pd110_DC.xyz'
   data-style='stick'>
 </div>
+
+### Box size
+
+#### Displacement
+
+<p align="center"> <img src="/img/dc-pd110-boxsize.png" width="100%"> </p>
