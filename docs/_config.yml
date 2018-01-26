@@ -6,7 +6,7 @@ navigation:
   - title: KBS - Home
     url: http://kbsezginel.github.io
   - title: Nanocar
-    url: nanocar
+    url: /
   - title: Surface Diffusion
     url: surface-diffusion
   - title: Simulation Setup Tests
