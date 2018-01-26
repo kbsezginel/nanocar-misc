@@ -27,7 +27,7 @@ temperature range.
 </tr>
   <tr>
   <th>
-  <div style="height: 300px; width: 500px;"
+  <div style="height: 300px; width: 300px;"
     class='viewer_3Dmoljs' data-datatype='xyz'
     data-backgroundcolor='0xffffff'
     data-href='assets/mol/DC-single.xyz'
@@ -35,7 +35,7 @@ temperature range.
   </div>
   </th>
   <th>
-  <div style="height: 300px; width: 500px;"
+  <div style="height: 300px; width: 300px;"
     class='viewer_3Dmoljs' data-datatype='xyz'
     data-backgroundcolor='0xffffff'
     data-href='assets/mol/HtBDC-single.xyz'
