@@ -18,14 +18,30 @@ low this leads to a 4 orders of magnitude higher diffusion
 constant for HtBDC compared to DC in the investigated
 temperature range.
 
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
 <table>
 <tr>
   <th>DC</th>
   <th>HtBDC</th>
 </tr>
   <tr>
-  <th><iframe style="width: 300px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=67448&bg=white"></iframe></th>
-  <th><iframe style="width: 300px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=wireframe&cid=15467576&bg=white"></iframe></th>
+  <th>
+  <div style="height: 300px; width: 500px;"
+    class='viewer_3Dmoljs' data-datatype='xyz'
+    data-backgroundcolor='0xffffff'
+    data-href='assets/mol/DC-single.xyz'
+    data-style='stick'>
+  </div>
+  </th>
+  <th>
+  <div style="height: 300px; width: 500px;"
+    class='viewer_3Dmoljs' data-datatype='xyz'
+    data-backgroundcolor='0xffffff'
+    data-href='assets/mol/HtBDC-single.xyz'
+    data-style='stick'>
+  </div>
+  </th>
 </tr>
 </table>
 
