@@ -2,3 +2,14 @@ theme: jekyll-theme-minimal
 title: "Nanocar"
 description: "Molecular cars"
 show_downloads: True
+navigation:
+  - title: KBS - Home
+    url: http://kbsezginel.github.io
+  - title: Nanocar
+    url: nanocar
+  - title: Surface Diffusion
+    url: surface-diffusion
+  - title: Simulation Setup Tests
+    url: simulation-setup-tests
+  - title: Pyrene
+    url: pyrene

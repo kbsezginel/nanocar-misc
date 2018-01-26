@@ -17,16 +17,14 @@
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <a href="http://kbsezginel.github.io"><strong>- </strong>KBS - Home</a>
-        <br>
-        <a href="{{ '/' | relative_url }}"><strong>- </strong>Nanocar</a>
-        <br>
-        <a href="{{ '/surface-diffusion' | relative_url }}"><strong>- </strong>Surface Diffusion</a>
-        <br>
-        <a href="{{ '/simulation-setup-tests' | relative_url }}"><strong>- </strong>Simulation Setup Tests</a>
-        <br>
-        <a href="{{ '/pyrene' | relative_url }}"><strong>- </strong>Pyrene</a>
-        <br> <br>
+        <table>
+          {% for nav in site.navigation %}
+            <tr>
+              <th><a href="{{ nav.url }}">{{ nav.title }}</a></th>
+            </tr>
+          {% endfor %}
+        </table>
+
 
         {% if site.show_downloads %}
           <ul>
