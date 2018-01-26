@@ -5,11 +5,6 @@ title: Nanocar
 # Nanocar
 Python library for designing molecular cars.
 
-## Navigation
-- [Lammps setup for simulations][lammps-setup]
-- [Pyrene on rigid wall][rigid-wall]
-- [Diffusion on surfaces][molecular-diffusion-on-a-surface]
-
 ## Installation
 
 ## Usage
