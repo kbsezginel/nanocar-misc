@@ -6,6 +6,7 @@ Gemfile.lock
 data
 dev
 molecules/surfaces/Cu110/DC_Cu110
+molecules/surfaces/Cu110/DC_Cu110_EQeq
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
