@@ -2,12 +2,17 @@
 layout: default
 title: Nanocar
 ---
-# Nanocar
+Nanocar
+=======
 Python library for designing molecular cars.
 
-## Installation
+**The library is currently under development...**
 
-## Usage
+Installation
+------------
+
+Usage
+-----
 
 ### Wheels
 <p align="center"> <img src="assets/img/wheels.png"> </p>

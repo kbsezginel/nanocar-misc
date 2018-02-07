@@ -1,6 +1,8 @@
 # Nanocar
 Python library for designing molecular cars.
 
+**The library is currently under development...**
+
 ## Installation
 
 ## Usage
@@ -23,5 +25,5 @@ Nanocars can be assembled by selecting a chassis and set of wheels.
 [C60]: https://en.wikipedia.org/wiki/Buckminsterfullerene
 [Adamantane]: https://en.wikipedia.org/wiki/Adamantane
 [Triptycene]: https://en.wikipedia.org/wiki/Triptycene
-[Fig1]: https://github.com/kbsezginel/Nanocar/blob/master/docs/img/wheels.png
-[Fig2]: https://github.com/kbsezginel/Nanocar/blob/master/docs/img/nanocar-build.PNG
+[Fig1]: https://github.com/kbsezginel/Nanocar/blob/master/docs/assets/img/wheels.png
+[Fig2]: https://github.com/kbsezginel/Nanocar/blob/master/docs/assets/img/nanocar-build.PNG
