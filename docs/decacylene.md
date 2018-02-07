@@ -1,4 +1,16 @@
 ---
+eqeq:
+  headers: ['No chagers', 'EQeq']
+  links:
+    - assets/img/msd/traj-ff1.gif
+    - assets/img/msd/traj-eqeq.gif
+ff3_eps:
+  headers: ['1σ', '2σ', '4ε', '10ε']
+  links:
+    - assets/img/msd/traj-ff1.gif
+    - assets/img/msd/ff3-2eps.gif
+    - assets/img/msd/ff3-4eps.gif
+    - assets/img/msd/ff3-10eps.gif
 ff3:
   headers: ['2ε', '3ε', '4ε', '5ε', '7.5ε', '10ε']
   links:
@@ -48,6 +60,15 @@ Charge assignment is done using the EQeq code with the above configuration (DC .
 **DC Charge Distribution**
 <p><img src="assets/img/msd/DC-charge.png" alt="Cu110-charge"></p>
 
+<table>
+  <tr>{% for head in page.eqeq.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.eqeq.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
+
 Mean Squared Displacement (MSD)
 -------------------------------
 
@@ -94,9 +115,9 @@ Here Green-Kubo approximation is used.
 ### FF3 - Effect of Epsilon
 
 <table>
-  <tr>{% for head in page.ff3.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>{% for head in page.ff3_eps.headers %}<th>{{ head }}</th>{% endfor %}</tr>
   <tr>
-    {% for link in page.ff3.links %}
+    {% for link in page.ff3_eps.links %}
       <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
     {% endfor %}
   </tr>
@@ -104,10 +125,24 @@ Here Green-Kubo approximation is used.
 
 ### FF3 - Effect of Sigma
 
+<p><img src="assets/img/msd/ff3-2sig.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-2eps2sig.png" alt="lammps-msd-eqeq"></p>
+
 <table>
   <tr>{% for head in page.ff3_sig.headers %}<th>{{ head }}</th>{% endfor %}</tr>
   <tr>
     {% for link in page.ff3_sig.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
+
+### All Epsilon
+
+<table>
+  <tr>{% for head in page.ff3.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.ff3.links %}
       <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
     {% endfor %}
   </tr>
