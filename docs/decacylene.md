@@ -1,9 +1,10 @@
 ---
-eqeq:
-  headers: ['No chagers', 'EQeq']
+ff_comparison:
+  headers: ['FF1', 'FF2 (EQeq)', 'FF3 (5ε)']
   links:
     - assets/img/msd/traj-ff1.gif
     - assets/img/msd/traj-eqeq.gif
+    - assets/img/msd/ff3-5eps.gif
 ff3_eps:
   headers: ['1σ', '2σ', '4ε', '10ε']
   links:
@@ -48,8 +49,20 @@ Fixing *z-length* of the box at `50 Å`, the simulation box has a size of `39.08
 Force field
 -----------
 Different force fields are tested for the above setup.
-1. UFF with no-charges
-2. UFF with EQeq
+-   **FF1:** UFF with no-charges
+-   **FF2:** UFF with EQeq
+-   **FF3:** UFF with no-charges but increased pairwise interactions
+
+###  Force field comparison
+
+<table>
+  <tr>{% for head in page.ff_comparison.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.ff_comparison.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
 
 ### EQeq
 Charge assignment is done using the EQeq code with the above configuration (DC .5 nm above Cu110 slab).
@@ -59,15 +72,6 @@ Charge assignment is done using the EQeq code with the above configuration (DC .
 
 **DC Charge Distribution**
 <p><img src="assets/img/msd/DC-charge.png" alt="Cu110-charge"></p>
-
-<table>
-  <tr>{% for head in page.eqeq.headers %}<th>{{ head }}</th>{% endfor %}</tr>
-  <tr>
-    {% for link in page.eqeq.links %}
-      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
-    {% endfor %}
-  </tr>
-</table>
 
 Mean Squared Displacement (MSD)
 -------------------------------
