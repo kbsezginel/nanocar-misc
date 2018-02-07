@@ -19,6 +19,15 @@ box_size:
   - assets/img/DC_Cu110/DC_Cu110_ppp_z30.gif
   - assets/img/DC_Cu110/DC_Cu110_ppp_z40.gif
   - assets/img/DC_Cu110/DC_Cu110_ppp_z50.gif
+ff3:
+  headers: ['2ε', '3ε', '4ε', '5ε', '7.5ε', '10ε']
+  links:
+    - assets/img/msd/ff3-2eps.gif
+    - assets/img/msd/ff3-3eps.gif
+    - assets/img/msd/ff3-4eps.gif
+    - assets/img/msd/ff3-5eps.gif
+    - assets/img/msd/ff3-7.5eps.gif
+    - assets/img/msd/ff3-10eps.gif
 ---
 MD simulations (LAMMPS) for diffusion of Decacylene
 ===================================================
@@ -68,6 +77,15 @@ The dark red data is generated using `com yes` option to use center of mass for 
 **With EQeq charges - FF2**
 <p><img src="assets/img/msd/lammps-msd-eqeq.png" alt="lammps-msd-eqeq"></p>
 
+**Increased Epsilon - FF3**
+<p><img src="assets/img/msd/ff3-2eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-3eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-4eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-7.5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-10eps.png" alt="lammps-msd-eqeq"></p>
+
+
 ### Green-Kubo
 Here Green-Kubo approximation is used.
 
@@ -78,49 +96,22 @@ Here Green-Kubo approximation is used.
 **With EQeq charges - FF2**
 <p><img src="assets/img/msd/green-kubo-eqeq.png" alt="green-kubo-eqeq"></p>
 
+**Increased Epsilon - FF3**
+<p><img src="assets/img/msd/gk-ff3-2eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-3eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-4eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-7.5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-10eps.png" alt="lammps-msd-eqeq"></p>
 
-### Tests
--   Periodic vs non-periodic *z-direction*
--   Temperature
--   Box size
--   Decacylene - slab distance
+<p><img src="assets/img/msd/gk-ff3-all.png" alt="lammps-msd-eqeq"></p>
 
-## Box Periodicity
-
-<table><tr>{% for head in page.box_periodicity.headers %}<th>{{ head }}</th>{% endfor %}</tr>
-<tr>{% for link in page.box_periodicity.links %}<th><a href="{{ link }}">
-<img src="{{ link }}"></a></th>{% endfor %}</tr></table>
-
-### Temperature
+### FF3 - Effect of Epsilon
 
 <table>
-  <tr>{% for head in page.temperature.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>{% for head in page.ff3.headers %}<th>{{ head }}</th>{% endfor %}</tr>
   <tr>
-    {% for link in page.temperature.links %}
-      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
-    {% endfor %}
-  </tr>
-</table>
-
-### Box size
-
-#### *z-direction*
-
-<table>
-  <tr>{% for head in page.box_size.headers %}<th>{{ head }}</th>{% endfor %}</tr>
-  <tr>
-    {% for link in page.box_size.links %}
-      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
-    {% endfor %}
-  </tr>
-</table>
-
-#### *xy-plane*
-
-<table>
-  <tr>{% for head in page.box_size.headers %}<th>{{ head }}</th>{% endfor %}</tr>
-  <tr>
-    {% for link in page.box_size.links %}
+    {% for link in page.ff3.links %}
       <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
     {% endfor %}
   </tr>
