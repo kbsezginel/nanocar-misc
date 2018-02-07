@@ -29,6 +29,3 @@ Nanocars can be assembled by selecting a chassis and set of wheels.
 [C60]: https://en.wikipedia.org/wiki/Buckminsterfullerene
 [Adamantane]: https://en.wikipedia.org/wiki/Adamantane
 [Triptycene]: https://en.wikipedia.org/wiki/Triptycene
-[rigid-wall]: https://kbsezginel.github.io/Nanocar/rigid-wall
-[lammps-setup]: https://kbsezginel.github.io/Nanocar/lammps-setup
-[molecular-diffusion-on-a-surface]: https://kbsezginel.github.io/Nanocar/molecular-diffusion-on-a-surface
