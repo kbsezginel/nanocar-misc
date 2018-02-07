@@ -1,24 +1,4 @@
 ---
-box_periodicity:
-  headers: ['ppp', 'ppf']
-  links:
-  - assets/img/DC_Cu110/DC_Cu110_ppp.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppf.gif
-temperature:
-  headers: ['150 K', '175 K', '200 K', '225 K', '250 K']
-  links:
-  - assets/img/DC_Cu110/DC_Cu110_ppp_T150.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_T175.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_T200.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_T225.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_T250.gif
-box_size:
-  headers: ['2 nm', '3 nm', '4 nm', '5 nm']
-  links:
-  - assets/img/DC_Cu110/DC_Cu110_ppp_z20.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_z30.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_z40.gif
-  - assets/img/DC_Cu110/DC_Cu110_ppp_z50.gif
 ff3:
   headers: ['2ε', '3ε', '4ε', '5ε', '7.5ε', '10ε']
   links:
@@ -28,6 +8,11 @@ ff3:
     - assets/img/msd/ff3-5eps.gif
     - assets/img/msd/ff3-7.5eps.gif
     - assets/img/msd/ff3-10eps.gif
+ff3_sig:
+  headers: ['2σ', '2ε2σ']
+  links:
+    - assets/img/msd/ff3-2sig.gif
+    - assets/img/msd/ff3-2eps2sig.gif
 ---
 MD simulations (LAMMPS) for diffusion of Decacylene
 ===================================================
@@ -112,6 +97,17 @@ Here Green-Kubo approximation is used.
   <tr>{% for head in page.ff3.headers %}<th>{{ head }}</th>{% endfor %}</tr>
   <tr>
     {% for link in page.ff3.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
+
+### FF3 - Effect of Sigma
+
+<table>
+  <tr>{% for head in page.ff3_sig.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.ff3_sig.links %}
       <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
     {% endfor %}
   </tr>
