@@ -9,7 +9,7 @@ navigation:
     url: /
   - title: Surface Diffusion
     url: surface-diffusion
-  - title: Simulation Setup Tests
-    url: simulation-setup-tests
+  - title: Decacylene
+    url: decacylene
   - title: Pyrene
     url: pyrene

@@ -20,9 +20,11 @@ box_size:
   - assets/img/DC_Cu110/DC_Cu110_ppp_z40.gif
   - assets/img/DC_Cu110/DC_Cu110_ppp_z50.gif
 ---
-# MD simulation setup (LAMMPS) for diffusion
+MD simulations (LAMMPS) for diffusion of Decacylene
+===================================================
 
-# Decacylene on Cu (110)
+Decacylene (DC) on Cu (110)
+----------------------
 
 The metal slab is generated using a replication of `10 x 15 x 5` parallel to *xy-plane*.
 The decacylene is then aligned to *xy-plane* and placed `5 Å` above the slab in *z-direction*.
@@ -36,6 +38,46 @@ Fixing *z-length* of the box at `50 Å`, the simulation box has a size of `39.08
   data-href='assets/mol/DC_Cu110.xyz'
   data-style='stick'>
 </div>
+
+Force field
+-----------
+Different force fields are tested for the above setup.
+1. UFF with no-charges
+2. UFF with EQeq
+
+### EQeq
+Charge assignment is done using the EQeq code with the above configuration (DC .5 nm above Cu110 slab).
+
+**Cu110 Charge Distribution**
+<p><img src="assets/img/msd/Cu110-charge.png" alt="Cu110-charge"></p>
+
+**DC Charge Distribution**
+<p><img src="assets/img/msd/DC-charge.png" alt="Cu110-charge"></p>
+
+Mean Squared Displacement (MSD)
+-------------------------------
+
+### Lammps MSD
+MSD is calculated using `compute msd` command in Lammps.
+The dark red data is generated using `com yes` option to use center of mass for decacylene. The light red data is without using the center of mass but averaging each atom in decacylene.
+
+**Without charges - FF1**
+<p><img src="assets/img/msd/lammps-msd.png" alt="lammps-msd"></p>
+
+
+**With EQeq charges - FF2**
+<p><img src="assets/img/msd/lammps-msd-eqeq.png" alt="lammps-msd-eqeq"></p>
+
+### Green-Kubo
+Here Green-Kubo approximation is used.
+
+**Without charges - FF1**
+<p><img src="assets/img/msd/green-kubo.png" alt="green-kubo"></p>
+
+
+**With EQeq charges - FF2**
+<p><img src="assets/img/msd/green-kubo-eqeq.png" alt="green-kubo-eqeq"></p>
+
 
 ### Tests
 -   Periodic vs non-periodic *z-direction*
@@ -62,6 +104,8 @@ Fixing *z-length* of the box at `50 Å`, the simulation box has a size of `39.08
 
 ### Box size
 
+#### *z-direction*
+
 <table>
   <tr>{% for head in page.box_size.headers %}<th>{{ head }}</th>{% endfor %}</tr>
   <tr>
@@ -71,22 +115,13 @@ Fixing *z-length* of the box at `50 Å`, the simulation box has a size of `39.08
   </tr>
 </table>
 
-# Decacylene on Pd (110)
+#### *xy-plane*
 
-### Box size
-
-#### 2 nm
-<p align="center"> <img src="assets/img/dc-pd110-z20.gif" width="100%"> </p>
-
-#### 3 nm
-<p align="center"> <img src="assets/img/dc-pd110-z30.gif" width="100%"> </p>
-
-#### 4 nm
-<p align="center"> <img src="assets/img/dc-pd110-z40.gif" width="100%"> </p>
-
-#### 5 nm
-<p align="center"> <img src="assets/img/dc-pd110-z50.gif" width="100%"> </p>
-
-#### Displacement
-
-<p align="center"> <img src="assets/img/dc-pd110-boxsize.png" width="100%"> </p>
+<table>
+  <tr>{% for head in page.box_size.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.box_size.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
