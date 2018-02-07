@@ -46,10 +46,7 @@ temperature range.
 </table>
 
 
-## Diffusion of PVBA on Pd(1 1 0)
-
-## Diffusion of C60 on Pd(1 1 0)
-
+## Experimental Diffusion Results
 > Table 1: Diffusion parameters (activation energy and attempt frequency) extracted from experimental surface diffusion studies of a few selected molecules (DC, HtBDC, C60, PVBA) on two metal surfaces (Cu(1 1 0) and Pd(1 1 0)).
 
 <table>
