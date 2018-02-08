@@ -73,6 +73,14 @@ Charge assignment is done using the EQeq code with the above configuration (DC .
 **DC Charge Distribution**
 <p><img src="assets/img/msd/DC-charge.png" alt="Cu110-charge"></p>
 
+### FF3
+In **FF3** the pairwise interaction parameters between *Decacylene* and *Cu110* surface are varied. Here is how a change in *ε* parameter of the *Lennard-Jones*
+potential effects pairwise energy during simulation.
+
+<p><img src="assets/img/msd/ff3-vdw.png" alt="Cu110-charge"></p>
+
+With increasing *ε* for *Cu-C* and *Cu-H* interactions the total Van der Waals energy is decreased resulting in increased attractive forces between *Decacylene* and *Cu110*.
+
 Mean Squared Displacement (MSD)
 -------------------------------
 
