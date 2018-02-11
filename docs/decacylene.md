@@ -158,3 +158,18 @@ Here Green-Kubo approximation is used.
     {% endfor %}
   </tr>
 </table>
+
+
+### Molecule comparison
+
+#### x
+<p><img src="assets/img/msd/ff3-msd-both-x.png" alt="ff3-msd-both-x"></p>
+
+#### y
+<p><img src="assets/img/msd/ff3-msd-both-y.png" alt="ff3-msd-both-y"></p>
+
+#### z
+<p><img src="assets/img/msd/ff3-msd-both-z.png" alt="ff3-msd-both-z"></p>
+
+#### all
+<p><img src="assets/img/msd/ff3-msd-both-all.png" alt="ff3-msd-both-all"></p>
