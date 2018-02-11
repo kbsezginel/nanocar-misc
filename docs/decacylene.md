@@ -96,12 +96,7 @@ The dark red data is generated using `com yes` option to use center of mass for 
 <p><img src="assets/img/msd/lammps-msd-eqeq.png" alt="lammps-msd-eqeq"></p>
 
 **Increased Epsilon - FF3**
-<p><img src="assets/img/msd/ff3-2eps.png" alt="lammps-msd-eqeq"></p>
-<p><img src="assets/img/msd/ff3-3eps.png" alt="lammps-msd-eqeq"></p>
-<p><img src="assets/img/msd/ff3-4eps.png" alt="lammps-msd-eqeq"></p>
-<p><img src="assets/img/msd/ff3-5eps.png" alt="lammps-msd-eqeq"></p>
-<p><img src="assets/img/msd/ff3-7.5eps.png" alt="lammps-msd-eqeq"></p>
-<p><img src="assets/img/msd/ff3-10eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/dc-ff3-msd.png" alt="lammps-msd-eqeq"></p>
 
 
 ### Green-Kubo
@@ -134,6 +129,10 @@ Here Green-Kubo approximation is used.
     {% endfor %}
   </tr>
 </table>
+
+**Decacylene:**
+
+<p><img src="assets/img/msd/htbdc-ff3-msd.png" alt="lammps-msd-eqeq"></p>
 
 ### FF3 - Effect of Sigma
 
