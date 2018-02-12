@@ -180,3 +180,24 @@ Mean Squared Displacement Calculation
 <p><img src="assets/img/msd/msd-calc-single-atom.png" alt="msd-calc-single-atom"></p>
 
 <p><img src="assets/img/msd/msd-calc-group.png" alt="msd-calc-group"></p>
+
+Diffusivity
+-----------
+
+### Linear fitting to MSD vs Time (LAMMPS)
+
+<p><img src="assets/img/msd/DC-ff3-lammps-msd-fit.png" alt="DC-ff3-lammps-msd-fit.png"></p>
+
+<p><img src="assets/img/msd/HtBDC-ff3-lammps-msd-fit.png" alt="HtBDC-ff3-lammps-msd-fit"></p>
+
+### Linear fitting to MSD vs Time (Angstrom)
+
+<p><img src="assets/img/msd/DC-ff3-calc-msd-fit.png" alt="DC-ff3-calc-msd-fit"></p>
+
+<p><img src="assets/img/msd/HtBDC-ff3-calc-msd-fit.png" alt="HtBDC-ff3-calc-msd-fit"></p>
+
+### Plotting the slopes (y-axis)
+
+<p><img src="assets/img/msd/ff3-lammps-msd-diffusivity.png" alt="ff3-lammps-msd-diffusivity"></p>
+
+<p><img src="assets/img/msd/ff3-calc-msd-diffusivity.png" alt="ff3-calc-msd-diffusivity"></p>
