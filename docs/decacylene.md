@@ -181,6 +181,14 @@ Mean Squared Displacement Calculation
 
 <p><img src="assets/img/msd/msd-calc-group.png" alt="msd-calc-group"></p>
 
+### LAMMPS MSD ve Calculated (Angstrom)
+
+#### DC
+<p><img src="assets/img/msd/dc-ff3-msd-lammps-vs-calc.png" alt="dc-ff3-msd-lammps-vs-calc"></p>
+
+#### HtBDC
+<p><img src="assets/img/msd/htbdc-ff3-msd-lammps-vs-calc.png" alt="htbdc-ff3-msd-lammps-vs-calc"></p>
+
 Diffusivity
 -----------
 
