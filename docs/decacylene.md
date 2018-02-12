@@ -173,3 +173,10 @@ Here Green-Kubo approximation is used.
 
 #### all
 <p><img src="assets/img/msd/ff3-msd-both-all.png" alt="ff3-msd-both-all"></p>
+
+Mean Squared Displacement Calculation
+-------------------------------------
+
+<p><img src="assets/img/msd/msd-calc-single-atom.png" alt="msd-calc-single-atom"></p>
+
+<p><img src="assets/img/msd/msd-calc-group.png" alt="msd-calc-group"></p>
