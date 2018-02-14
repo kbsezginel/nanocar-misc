@@ -66,3 +66,49 @@ box_size:
     {% endfor %}
   </tr>
 </table>
+
+### DC - UFF - Green-Kubo
+Here Green-Kubo approximation is used.
+
+**Without charges - FF1**
+<p><img src="assets/img/msd/green-kubo.png" alt="green-kubo"></p>
+
+
+**With EQeq charges - FF2**
+<p><img src="assets/img/msd/green-kubo-eqeq.png" alt="green-kubo-eqeq"></p>
+
+**Increased Epsilon - FF3**
+<p><img src="assets/img/msd/gk-ff3-2eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-3eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-4eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-7.5eps.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/gk-ff3-10eps.png" alt="lammps-msd-eqeq"></p>
+
+<p><img src="assets/img/msd/gk-ff3-all.png" alt="lammps-msd-eqeq"></p>
+
+### DC - UFF (FF3) - Effect of Sigma
+
+<p><img src="assets/img/msd/ff3-2sig.png" alt="lammps-msd-eqeq"></p>
+<p><img src="assets/img/msd/ff3-2eps2sig.png" alt="lammps-msd-eqeq"></p>
+
+<table>
+  <tr>{% for head in page.ff3_sig.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.ff3_sig.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
+
+### DC vs HtBDC - UFF (FF3) - MSD Comparison by direction
+
+<p><b>x</b><img src="assets/img/msd/ff3-msd-both-x.png" alt="ff3-msd-both-x"></p>
+<p><b>y</b><img src="assets/img/msd/ff3-msd-both-y.png" alt="ff3-msd-both-y"></p>
+<p><b>z</b><img src="assets/img/msd/ff3-msd-both-z.png" alt="ff3-msd-both-z"></p>
+<p><b>all</b><img src="assets/img/msd/ff3-msd-both-all.png" alt="ff3-msd-both-all"></p>
+
+
+# Mean Squared Displacement
+
+##
