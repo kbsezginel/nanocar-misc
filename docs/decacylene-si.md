@@ -108,7 +108,15 @@ Here Green-Kubo approximation is used.
 <p><b>z</b><img src="assets/img/msd/ff3-msd-both-z.png" alt="ff3-msd-both-z"></p>
 <p><b>all</b><img src="assets/img/msd/ff3-msd-both-all.png" alt="ff3-msd-both-all"></p>
 
+### DC - UFF - LAMMPS MSD CoM vs No CoM
 
-# Mean Squared Displacement
+The dark red data is generated using `com yes` option to use center of mass for decacylene. The light red data is without using the center of mass but averaging each atom in decacylene.
 
-##
+**Without charges - FF1**
+<p><img src="assets/img/msd/lammps-msd.png" alt="lammps-msd"></p>
+
+**With EQeq charges - FF2**
+<p><img src="assets/img/msd/lammps-msd-eqeq.png" alt="lammps-msd-eqeq"></p>
+
+**Increased Epsilon - FF3**
+<p><img src="assets/img/msd/dc-ff3-msd.png" alt="lammps-msd-eqeq"></p>

@@ -151,63 +151,85 @@ Different configurations are tested using the universal force field:
 Mean Squared Displacement (MSD)
 ===============================
 
-### Lammps MSD
-MSD is calculated using `compute msd` command in Lammps and also using []() library. In Lammps both 
-The dark red data is generated using `com yes` option to use center of mass for decacylene. The light red data is without using the center of mass but averaging each atom in decacylene.
-
-**Without charges - FF1**
-<p><img src="assets/img/msd/lammps-msd.png" alt="lammps-msd"></p>
-
-**With EQeq charges - FF2**
-<p><img src="assets/img/msd/lammps-msd-eqeq.png" alt="lammps-msd-eqeq"></p>
-
-**Increased Epsilon - FF3**
-<p><img src="assets/img/msd/dc-ff3-msd.png" alt="lammps-msd-eqeq"></p>
-
-
-
-
 Mean Squared Displacement Calculation
 -------------------------------------
 
-<p><img src="assets/img/msd/msd-calc-single-atom.png" alt="msd-calc-single-atom"></p>
+<p class="collapse">
+  <details>
+    <summary><b>Click here for calculation details</b></summary>
+    <p>MSD is calculated using the <code>compute msd</code> command in Lammps and also using the <a href="https://github.com/kbsezginel/angstrom" target="_blank">Ångström</a> Python package. In Lammps, MSD calculations were done both with and without the center of mass option. You can see the differences in the <a href="/decacylene-si" target="_blank">Supplementary Information</a>. Here, MSD results without using the center of mass option are shown.</p>
 
-<p><img src="assets/img/msd/msd-calc-group.png" alt="msd-calc-group"></p>
+    <h3>Lammps MSD vs Calculated MSD</h3>
+    <h4>Single Atom vs Grouped Atoms (HtBDC - UFF (FF3) - 5ε)</h4>
+    <p>In Lammps you can group atoms and then use the <code>compute msd</code> command to calculate MSD of this group of atoms.
+    As a result, Lammps returns a 4 element array of MSD values for x, y, z directions and overall.
+    Then, you can also tell at which interval you want to print these MSD values.
+    Here, I am showing results for MSD values printed each 1000 timesteps where <code>dt = 0.5 fs</code>.
+    The simulations are 2 million timesteps long corresponding to 1 ps.
+    Using <a href="https://github.com/kbsezginel/angstrom" target="_blank">Ångström</a> I first convert trajctory coordinates to
+    non-periodic coordinates and then calculate MSD for a single atom using the MD trajectory.
+    Here is the comparison between Lammps MSD and calculated (Ångström) MSD results.</p>
 
-### LAMMPS MSD ve Calculated (Angstrom)
+    <p><img src="assets/img/msd/msd-calc-group.png" alt="msd-calc-group"></p>
 
-#### DC
-<p><img src="assets/img/msd/dc-ff3-msd-lammps-vs-calc.png" alt="dc-ff3-msd-lammps-vs-calc"></p>
+    <p>Alternatively, you can also calculate the MSD for a single atom in Lammps.
+    Theoretically, as the molecule is relatively small and all atoms are bonded together their MSD should not be too different.
+    Here are the resultsd comparing single atom MSD in Lammps and calculated single atom MSD.</p>
 
-#### HtBDC
-<p><img src="assets/img/msd/htbdc-ff3-msd-lammps-vs-calc.png" alt="htbdc-ff3-msd-lammps-vs-calc"></p>
+    <p><img src="assets/img/msd/msd-calc-single-atom.png" alt="msd-calc-single-atom"></p>
+
+    <p>As seen in figures, the single atom MSD results are more comparable to calculated MSD results, however
+    there are still differences. Overall, the curves follow the same trends but the calculated MSD curve
+    is much more smooth compared to Lammps results. I am still investigating where this difference is coming from.</p>
+
+    <h4>DC - UFF (FF3) MSD Comparison</h4>
+    <p><img src="assets/img/msd/dc-ff3-msd-lammps-vs-calc.png" alt="dc-ff3-msd-lammps-vs-calc"></p>
+    <h4>HtBDC - UFF (FF3) MSD Comparison</h4>
+    <p><img src="assets/img/msd/htbdc-ff3-msd-lammps-vs-calc.png" alt="htbdc-ff3-msd-lammps-vs-calc"></p>
+  </details>
+</p>
+
+Experimental Comparison
+=======================
+
+<p class="collapse">
+  <details>
+    <summary><b>Click here for details</b></summary>
+    <p><b>Decacylene - UFF (FF3) - Increased Epsilon</b><img src="assets/img/msd/dc-ff3-msd.png" alt="lammps-msd-eqeq"></p>
+  </details>
+</p>
 
 Diffusivity
------------
+===========
 
-### Linear fitting to MSD vs Time (LAMMPS)
+<p class="collapse">
+  <details>
+    <summary><b>Click here for calculation details</b></summary>
 
-<p><img src="assets/img/msd/DC-ff3-lammps-msd-fit.png" alt="DC-ff3-lammps-msd-fit.png"></p>
+    <h3>Linear fitting to MSD vs Time (LAMMPS)</h3>
 
-<p><img src="assets/img/msd/HtBDC-ff3-lammps-msd-fit.png" alt="HtBDC-ff3-lammps-msd-fit"></p>
+    <p><img src="assets/img/msd/DC-ff3-lammps-msd-fit.png" alt="DC-ff3-lammps-msd-fit.png"></p>
 
-### Linear fitting to MSD vs Time (Angstrom)
+    <p><img src="assets/img/msd/HtBDC-ff3-lammps-msd-fit.png" alt="HtBDC-ff3-lammps-msd-fit"></p>
 
-<p><img src="assets/img/msd/DC-ff3-calc-msd-fit.png" alt="DC-ff3-calc-msd-fit"></p>
+    <h3>Linear fitting to MSD vs Time (Angstrom)</h3>
 
-<p><img src="assets/img/msd/HtBDC-ff3-calc-msd-fit.png" alt="HtBDC-ff3-calc-msd-fit"></p>
+    <p><img src="assets/img/msd/DC-ff3-calc-msd-fit.png" alt="DC-ff3-calc-msd-fit"></p>
 
-### Plotting the slopes (y-axis)
+    <p><img src="assets/img/msd/HtBDC-ff3-calc-msd-fit.png" alt="HtBDC-ff3-calc-msd-fit"></p>
 
-<table>
-<tr>
-<th>LAMMPS</th>
-<th>Calculated</th>
-</tr>
-<tr>
-<th><img src="assets/img/msd/ff3-lammps-msd-diffusivity.png" alt="ff3-lammps-msd-diffusivity">
-</th>
-<th><img src="assets/img/msd/ff3-calc-msd-diffusivity.png" alt="ff3-calc-msd-diffusivity">
-</th>
-</tr>
-</table>
+    <h3>Plotting the slopes (y-axis)</h3>
+
+    <table>
+      <tr>
+        <th>LAMMPS</th>
+        <th>Calculated</th>
+      </tr>
+      <tr>
+        <th><img src="assets/img/msd/ff3-lammps-msd-diffusivity.png" alt="ff3-lammps-msd-diffusivity"></th>
+        <th><img src="assets/img/msd/ff3-calc-msd-diffusivity.png" alt="ff3-calc-msd-diffusivity"></th>
+      </tr>
+    </table>
+
+  </details>
+</p>
