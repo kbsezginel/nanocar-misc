@@ -1,7 +1,3 @@
----
-layout: default
-title: Nanocar
----
 Nanocar
 =======
 Python library for designing molecular cars.
