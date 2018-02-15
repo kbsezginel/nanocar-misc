@@ -103,14 +103,14 @@ Different configurations are tested using the universal force field:
 
 <h3>Force field comparison</h3>
 
-  <table>
-    <tr>{% for head in page.ff_comparison.headers %}<th>{{ head }}</th>{% endfor %}</tr>
-    <tr>
-      {% for link in page.ff_comparison.links %}
-        <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
-      {% endfor %}
-    </tr>
-  </table>
+<table>
+  <tr>{% for head in page.ff_comparison.headers %}<th>{{ head }}</th>{% endfor %}</tr>
+  <tr>
+    {% for link in page.ff_comparison.links %}
+      <th><a href="{{ link }}"><img src="{{ link }}"></a></th>
+    {% endfor %}
+  </tr>
+</table>
 
 <p class="collapse">
   <details><summary><b>More information</b></summary>
@@ -147,6 +147,9 @@ Different configurations are tested using the universal force field:
 </p>
 
 <h2>UFF4MOF</h2>
+
+<h2>Dreiding</h2>
+
 
 Mean Squared Displacement (MSD)
 ===============================
@@ -230,7 +233,7 @@ Diffusivity
         <th><img src="assets/img/msd/ff3-calc-msd-diffusivity.png" alt="ff3-calc-msd-diffusivity"></th>
       </tr>
     </table>
-    
+
     <p>To convert from A<sup>2</sup>/ps to cm<sup>2</sup>/s we need to devide by 10000.
     The experimental results for DC and HtBDC are 0.1 and 7.94, respectively.
     The Lampps MSD results for 2e suggest 0.5 cm<sup>2</sup>/s and 1.2 cm<sup>2</sup>/s for DC and HtBDC, respectively.
