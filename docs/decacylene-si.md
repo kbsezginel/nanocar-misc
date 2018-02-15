@@ -20,6 +20,46 @@ box_size:
   - assets/img/DC_Cu110/DC_Cu110_ppp_z40.gif
   - assets/img/DC_Cu110/DC_Cu110_ppp_z50.gif
 ---
+Force field parameters
+----------------------
+
+<table>
+  <tr>
+    <th>Force Field</th>
+    <th colspan="2" style="text-align:center">Cu</th>
+    <th colspan="2" style="text-align:center">C</th>
+    <th colspan="2" style="text-align:center">H</th>
+  </tr>
+  <tr>
+      <th>LJ</th>
+      <th>ε (kcal/mol)</th>
+      <th>σ (Å)</th>
+      <th>ε (kcal/mol)</th>
+      <th>σ (Å)</th>
+      <th>ε (kcal/mol)</th>
+      <th>σ (Å)</th>
+  </tr>
+  <tr>
+      <th>UFF</th>
+      <th>0.005000</th>
+      <th>3.113691</th>
+      <th>0.105000</th>
+      <th>3.430851</th>
+      <th>0.044000</th>
+      <th>2.571134</th>
+  </tr>
+  <tr>
+      <th>DRE</th>
+      <th>0.055000</th>
+      <th>4.044680</th>
+      <th>0.095100</th>
+      <th>3.472990</th>
+      <th>0.015200</th>
+      <th>2.846421</th>
+  </tr>
+</table>
+
+
 ### Tests
 -   Periodic vs non-periodic *z-direction*
 -   Temperature
