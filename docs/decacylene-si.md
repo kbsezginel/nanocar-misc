@@ -31,33 +31,57 @@ Force field parameters
     <th colspan="2" style="text-align:center">H</th>
   </tr>
   <tr>
-      <th>LJ</th>
-      <th>ε (kcal/mol)</th>
-      <th>σ (Å)</th>
-      <th>ε (kcal/mol)</th>
-      <th>σ (Å)</th>
-      <th>ε (kcal/mol)</th>
-      <th>σ (Å)</th>
+    <th>LJ</th>
+    <th>ε (kcal/mol)</th>
+    <th>σ (Å)</th>
+    <th>ε (kcal/mol)</th>
+    <th>σ (Å)</th>
+    <th>ε (kcal/mol)</th>
+    <th>σ (Å)</th>
   </tr>
   <tr>
-      <th>UFF</th>
-      <th>0.005000</th>
-      <th>3.113691</th>
-      <th>0.105000</th>
-      <th>3.430851</th>
-      <th>0.044000</th>
-      <th>2.571134</th>
+    <th>UFF</th>
+    <td>0.005000</td>
+    <td>3.113691</td>
+    <td>0.105000</td>
+    <td>3.430851</td>
+    <td>0.044000</td>
+    <td>2.571134</td>
   </tr>
   <tr>
-      <th>DRE</th>
-      <th>0.055000</th>
-      <th>4.044680</th>
-      <th>0.095100</th>
-      <th>3.472990</th>
-      <th>0.015200</th>
-      <th>2.846421</th>
+    <th>DRE</th>
+    <td>0.055000</td>
+    <td>4.044680</td>
+    <td>0.095100</td>
+    <td>3.472990</td>
+    <td>0.015200</td>
+    <td>2.846421</td>
   </tr>
 </table>
+
+Decacylene - UFF
+----------------
+<p><img src="assets/img/decacylene/DC-UFF-MSD-vs-time.png" alt="dc-uff-msd"></p>
+
+<p><b>Diffusion Coefficient</b><img src="assets/img/decacylene/DC-UFF-D0-vs-eps.png" alt="dc-uff-d0"></p>
+
+Decacylene - DRE
+----------------
+<p><img src="assets/img/decacylene/DC-DRE-MSD-vs-time.png" alt="dc-dre-msd"></p>
+
+<p><b>Diffusion Coefficient</b><img src="assets/img/decacylene/DC-DRE-D0-vs-eps.png" alt="dc-dre-d0"></p>
+
+HtBDC - UFF
+-----------
+<p><img src="assets/img/decacylene/HtBDC-UFF-MSD-vs-time.png" alt="htbdc-uff-msd"></p>
+
+<p><b>Diffusion Coefficient</b><img src="assets/img/decacylene/HtBDC-UFF-D0-vs-eps.png" alt="htbdc-uff-d0"></p>
+
+HtBDC - DRE
+-----------
+<p><img src="assets/img/decacylene/HtBDC-DRE-MSD-vs-time.png" alt="htbdc-dre-msd"></p>
+
+<p><b>Diffusion Coefficient</b><img src="assets/img/decacylene/HtBDC-DRE-D0-vs-eps.png" alt="htbdc-dre-d0"></p>
 
 
 ### Tests
