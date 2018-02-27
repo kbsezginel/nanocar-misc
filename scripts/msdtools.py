@@ -3,6 +3,8 @@ Functions to read and analyze MSD data.
 """
 import os
 import csv
+import datetime
+import subprocess
 import numpy as np
 from angstrom import Trajectory
 import matplotlib.pyplot as plt
@@ -116,11 +118,11 @@ Plot MSD vs time ---------------------------------------------------------------
 
 
 msd_settings = {'directions': ['x', 'y', 'z'], 'time_unit': 'ns', 'figsize': (15, 2.5), 'dpi': 200,
-            'subplots_adjust': (0.0, 0.25), 'suptitle': None, 'markersize': 50, 'linewidth': 2,
-            'fontsize': {'label': 14, 'title': 16, 'text': 20, 'tick': 14, 'suptitle': 18, 'fit': 12},
-            'color': {'x': '#c1ef1c', 'y': '#ff765e', 'z': '#c1ef1c', 'all': 'r', 'text': 'k', 'tick': 'k', 'fit': 'k'},
-            'fit': {'text': '$D_0$: %.1E $cm^2/s$\n$R^2$: %.3f',
-            'box': dict(boxstyle='round', facecolor='w', alpha=0.3, edgecolor='w'), 'loc': (0.5, 0.65)}}
+                'subplots_adjust': (0.0, 0.25), 'suptitle': None, 'markersize': 30, 'linewidth': 2,
+                'fontsize': {'label': 14, 'title': 16, 'text': 20, 'tick': 14, 'suptitle': 18, 'fit': 12},
+                'color': {'x': '#c1ef1c', 'y': '#ff765e', 'z': '#c1ef1c', 'all': 'r', 'text': 'k', 'tick': 'k', 'fit': 'k'},
+                'fit': {'text': '$D_0$: %.1E $cm^2/s$\n$R^2$: %.3f',
+                'box': dict(boxstyle='round', facecolor='w', alpha=0.3, edgecolor='w'), 'loc': (0.5, 0.65)}}
 
 
 def plot_msd(msd_data, settings=msd_settings, save=None):
@@ -151,3 +153,77 @@ def plot_msd(msd_data, settings=msd_settings, save=None):
     if save is not None:
         plt.savefig(save, dpi=settings['dpi'], transparent=True, bbox_inches='tight')
         print('Saved -> %s' % save)
+
+
+"""
+Markdown report template to be formatted. Add following sections (in order):
+ - title,
+"""
+
+report_template = """
+%s
+=======
+
+MSD Trajectory
+--------------
+
+![msd-traj](%s)
+
+LAMMPS MSD vs time
+------------------
+
+![lammps-msd](%s)
+
+Angstrom MSD vs time
+------------------
+
+![ang-msd](%s)
+
+### Simulation details
+
+-   Simulation directory: %s
+-   Report date: %s
+
+#### Simulation files
+
+%s
+"""
+
+
+def get_file_table(sim_dir):
+    """ Get list of files in the simulation directory and create a table. """
+    file_list = os.listdir(sim_dir)
+    rows = [['File', 'Date', 'Size']]
+    for f in file_list:
+        stats = os.stat(os.path.join(sim_dir, f))
+        f_date = datetime.datetime.fromtimestamp(stats.st_mtime).strftime("%Y-%m-%d %H:%M")
+        f_size = "%.1f kB" % (stats.st_size / 1024)  # In kilobytes
+        rows.append([f, f_date, f_size])
+    return html_table(rows)
+
+
+def html_table(rows):
+    """ Generate HTML table string using a list of rows (first one is headers) """
+    text = '<table>\n'
+    for i, row in enumerate(rows):
+        text += '  <tr>\n'
+        if i == 0:
+            text += ''.join(['    <th>%s</th>\n' % col for col in row])
+        else:
+            text += ''.join(['    <td>%s</td>\n' % col for col in row])
+        text += '  </tr>\n'
+    text += '</table>\n'
+    return text
+
+
+"""
+VMD movie generation
+"""
+
+
+def vmd_movie(sim_dir, vis_state):
+    """ Generate VMD movie """
+    cmd = ['vmd', '-dispdev', 'text', '-eofexit']
+    vmd_inp = open(vis_state, 'r')
+    subprocess.call(cmd, stdin=vmd_inp, cwd=sim_dir)
+    vmd_inp.close()

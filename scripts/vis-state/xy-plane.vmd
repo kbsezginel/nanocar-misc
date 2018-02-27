@@ -1,0 +1,129 @@
+#!/usr/local/bin/vmd
+# VMD version: 1.9.3
+# xy-plane view (y: vertical | x: horizontal)
+########################################## SETTINGS ################################################
+set surface_box {35.97 38.152 5.0 90.0 90.0 90.0}
+set start_frame 100
+set traj_file traj.xyz
+set movie_file movie.gif
+####################################################################################################
+# Load trajectory
+mol new $traj_file type xyz first 0 last -1 step 1 filebonds 1 autobonds 0 waitfor all
+########################################### MOL VIS ################################################
+# Set Hydrogen vdW balls
+mol representation VDW 0.300000 12.000000
+mol color ColorID 8
+mol selection {all name H}
+mol material Opaque
+mol addrep top
+
+# Set Carbon vdW balls
+mol representation VDW 0.300000 12.000000
+mol color ColorID 16
+mol selection {all name C}
+mol material Opaque
+mol addrep top
+
+# Set Dynamic Bonds
+mol representation DynamicBonds 1.600000 0.200000 12.000000
+mol color ColorID 6
+mol selection {all}
+mol material Opaque
+mol addrep top
+########################################### DISPLAY ################################################
+# Set display
+display projection Orthographic
+axes location off
+display resize 600 600
+
+# Set background
+color Display {Background} iceblue
+
+# Set camera angle
+set viewplist {}
+set viewpoints([molinfo top]) {{{1 0 0 -18} {0 1 0 -19} {0 0 1 -25} {0 0 0 1}}
+                              {{-1 0 0 0} {0 1 0 0} {0 0 -1 0} {0 0 0 1}}
+                              {{0.07 0 0 0} {0 0.07 0 0} {0 0 0.07 0} {0 0 0 1}}
+                              {{1 0 0 0} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+lappend viewplist [molinfo top]
+foreach v $viewplist {
+  molinfo $v set {center_matrix rotate_matrix scale_matrix global_matrix} $viewpoints($v)
+}
+# To get current rotation matrix: molinfo [molinfo top] get rotate_matrix
+############################################ OBJECTS ###############################################
+# Add simulation box -------------------------------------------------------------------------------
+package require pbctools
+
+# Add metal surface --------------------------------------------------------------------------------
+pbc set $surface_box -all
+pbc box_draw -style tubes -color orange
+####################################################################################################
+############################################ RENDER ################################################
+####################################################################################################
+# Take a picture
+proc take_picture {args} {
+  global take_picture
+  # when called with no parameter, render the image
+  if {$args == {}} {
+    set f [format $take_picture(format) $take_picture(frame)]
+    # take 1 out of every modulo images
+    if { [expr $take_picture(frame) % $take_picture(modulo)] == 0 } {
+      render $take_picture(method) $f
+      # call any unix command, if specified
+      if { $take_picture(exec) != {} } {
+        set f [format $take_picture(exec) $f $f $f $f $f $f $f $f $f $f]
+        eval "exec $f"
+       }
+    }
+    # increase the count by one
+    incr take_picture(frame)
+    return
+  }
+  lassign $args arg1 arg2
+  # reset the options to their initial stat
+  # (remember to delete the files yourself
+  if {$arg1 == "reset"} {
+    set take_picture(frame)  0
+    set take_picture(format) "./animate.%04d.rgb"
+    set take_picture(method) TachyonInternal
+    set take_picture(modulo) 1
+    set take_picture(exec)    {}
+    return
+  }
+  # set one of the parameters
+  if [info exists take_picture($arg1)] {
+    if { [llength $args] == 1} {
+      return "$arg1 is $take_picture($arg1)"
+    }
+    set take_picture($arg1) $arg2
+    return
+  }
+  # otherwise, there was an error
+  error {take_picture: [ | reset | frame | format  | \
+  method  | modulo ]}
+}
+####################################################################################################
+# Render animation
+proc make_trajectory_movie_files {start_frame movie_file} {
+  set num [molinfo top get numframes]
+  # loop through the frames
+  for {set i $start_frame} {$i < $num} {incr i} {
+    # go to the given frame
+    animate goto $i
+    # force display update
+    display update
+    # take the picture
+    take_picture
+        }
+  exec convert animate.*.rgb $movie_file
+  for {set i 0} {$i < $num} {incr i} {
+    # delete image
+    exec rm [format "animate.%04d.rgb" $i]
+      }
+}
+######################################## RENDERING MOVIE ###########################################
+# Initialize frames
+take_picture reset
+# Render images and gif
+make_trajectory_movie_files $start_frame $movie_file
+exit
