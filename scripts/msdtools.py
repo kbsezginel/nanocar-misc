@@ -5,6 +5,7 @@ import os
 import csv
 import numpy as np
 from angstrom import Trajectory
+import matplotlib.pyplot as plt
 
 
 def read_msd(msd_file, dt=0.5, time_unit='ns'):
@@ -114,60 +115,38 @@ Plot MSD vs time ---------------------------------------------------------------
 """
 
 
-lammps_msd_settings = {'msd_file': 'msd1.csv', 'dt': 0.5, 'time_unit': 'ns', 'dpi': 200,
-                       'directions': ['all', 'x', 'y', 'z'], 'suptitle': None,
-                       'fit': {'text': '$D_0$: %.1E $cm^2/s$\n$R^2$: %.3f', 'box': dict(boxstyle='round', facecolor='w', alpha=0.3, edgecolor='w'), 'loc': (0.5, 0.65)},
-                       'text': ['ε: 2', 'ε: 3', 'ε: 4', 'ε: 5', 'ε: 7.5', 'ε: 10'],
-                       'figsize': None, 'subplots_adjust': (0.0, 0.25),
-                       'text_box': dict(boxstyle='round', facecolor='xkcd:coral', alpha=0.3, edgecolor='white'),
-                       'color': {'x': 'xkcd:coral', 'y': 'xkcd:crimson', 'z': 'xkcd:coral', 'all': 'xkcd:crimson', 'text': 'xkcd:crimson', 'tick': 'k', 'fit': 'k'},
-                       'fontsize': {'label': 14, 'title': 16, 'text': 20, 'tick': 16, 'suptitle': 18, 'fit': 12}}
+msd_settings = {'directions': ['x', 'y', 'z'], 'time_unit': 'ns', 'figsize': (15, 2.5), 'dpi': 200,
+            'subplots_adjust': (0.0, 0.25), 'suptitle': None, 'markersize': 50, 'linewidth': 2,
+            'fontsize': {'label': 14, 'title': 16, 'text': 20, 'tick': 14, 'suptitle': 18, 'fit': 12},
+            'color': {'x': '#c1ef1c', 'y': '#ff765e', 'z': '#c1ef1c', 'all': 'r', 'text': 'k', 'tick': 'k', 'fit': 'k'},
+            'fit': {'text': '$D_0$: %.1E $cm^2/s$\n$R^2$: %.3f',
+            'box': dict(boxstyle='round', facecolor='w', alpha=0.3, edgecolor='w'), 'loc': (0.5, 0.65)}}
 
 
-def plot_lammps_msd(sim_list, settings=lammps_msd_settings, save=None):
-    """ Plot LAMMPS MSD vs time plots for a list of simulations """
-    if settings['figsize'] is None:
-        settings['figsize'] = (22, 2.2 * len(sim_list))
+def plot_msd(msd_data, settings=msd_settings, save=None):
+    """ Plot MSD vs time plots for each direction """
     fig = plt.figure(figsize=settings['figsize'], dpi=settings['dpi'])
     fig.subplots_adjust(hspace=settings['subplots_adjust'][0], wspace=settings['subplots_adjust'][1])
     if settings['suptitle'] is not None:
         fig.suptitle(settings['suptitle'], fontsize=settings['fontsize']['suptitle'], y=1.05)
-    idx = 1
-    for i, sim_dir in enumerate(sim_list, start=1):
-        msd_file = os.path.join(sim_dir, settings['msd_file'])
-        msd_data = read_msd(msd_file, dt=settings['dt'], time_unit=settings['time_unit'])
-        for j, axis in enumerate(settings['directions'], start=1):
-            ax = fig.add_subplot(len(sim_list), len(settings['directions']), idx)
-            ax.scatter(msd_data['time'], msd_data[axis], s=10, alpha=0.5, c=settings['color'][axis])
+    for idx, axis in enumerate(settings['directions'], start=1):
+        ax = fig.add_subplot(1, len(settings['directions']), idx)
+        ax.scatter(msd_data['time'], msd_data[axis], s=settings['markersize'], alpha=0.6,
+                   c=settings['color'][axis], edgecolor='k', linewidth=0.2)
+        ax.tick_params(labelsize=settings['fontsize']['tick'], labelcolor=settings['color']['tick'])
+        plt.title('MSD (%s)' % axis, fontsize=settings['fontsize']['title'])
+        plt.xlabel('Time (%s)' % settings['time_unit'], fontsize=settings['fontsize']['label'])
+        plt.xlim(-0.02, max(msd_data['time']) + 0.02)
 
-            # Linear fitting
-            if settings['fit'] is not None:
-                diff = calculate_d0(msd_data['time'], msd_data[axis], time_unit=settings['time_unit'])
-                msd_fit = [diff['a'] * x + diff['b'] for x in msd_data['time']]
-                ax.plot(msd_data['time'], msd_fit, '%s--' % settings['color']['fit'])
-
-            # Set yticks
-            ymax = max(msd_data[axis])
-            rounder = 10 ** (len(str(int(ymax))) - 1)
-            ytick = int(ymax + (rounder - ymax % rounder))
-            ax.tick_params(labelsize=settings['fontsize']['tick'], labelcolor=settings['color']['tick'])
-            plt.yticks([0, ytick], ['', str(ytick)])
-
-            if i == 1:
-                plt.title('MSD (%s)' % axis, fontsize=settings['fontsize']['title'])
-            if i == len(sim_list):
-                plt.xlabel('Time (%s)' % settings['time_unit'], fontsize=settings['fontsize']['label'])
-            else:
-                plt.xticks([])
-            if j == 1 and settings['text'] is not None:
-                plt.text(msd_data['time'][-1] * 0.05, ytick * 0.7, settings['text'][i - 1],
-                         fontsize=settings['fontsize']['text'], color=settings['color']['text'], bbox=settings['text_box'])
-            if settings['fit'] is not None:
-                diff_text = settings['fit']['text'] % (diff['d0'], diff['r2'])
-                plt.text(msd_data['time'][-1] * settings['fit']['loc'][0], ytick * settings['fit']['loc'][1], diff_text,
-                         color=settings['color']['fit'], fontsize=settings['fontsize']['fit'], bbox=settings['fit']['box'])
-
-            idx += 1
+        # Linear fitting
+        if settings['fit'] is not None:
+            msd_fit = [msd_data['a'][axis] * x + msd_data['b'][axis] for x in msd_data['time']]
+            ax.plot(msd_data['time'], msd_fit, '%s--' % settings['color']['fit'], linewidth=2)
+            diff_text = settings['fit']['text'] % (msd_data['d0'][axis], msd_data['r2'][axis])
+            y_text = (ax.get_ylim()[1] - ax.get_ylim()[0]) * 0.1 + ax.get_ylim()[0]
+            x_text = msd_data['time'][-1] * settings['fit']['loc'][0]
+            plt.text(x_text, y_text, diff_text, color=settings['color']['fit'],
+                     fontsize=settings['fontsize']['fit'], bbox=settings['fit']['box'])
 
     if save is not None:
         plt.savefig(save, dpi=settings['dpi'], transparent=True, bbox_inches='tight')
