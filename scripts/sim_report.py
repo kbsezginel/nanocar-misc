@@ -43,7 +43,7 @@ report_file = os.path.join(save_dir, 'report.md')
 ###################################################################
 
 # Generate movie
-vmd_movie(sim_dir, 'vis-state.vmd')
+vmd_movie(sim_dir, save_dir, 'vis-state.vmd')
 
 # Calculate MSD
 msd_data = read_msd_data(traj_file, sim_box, start_frame=start_frame, dt=dt, time_unit=time_unit)

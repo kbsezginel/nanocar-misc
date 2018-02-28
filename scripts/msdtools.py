@@ -223,7 +223,7 @@ VMD movie generation
 """
 
 
-def vmd_movie(sim_dir, vis_state, movie_file='movie.gif'):
+def vmd_movie(sim_dir, report_dir, vis_state, movie_file='movie.gif'):
     """ Generate VMD movie """
     cmd = ['vmd', '-dispdev', 'text', '-eofexit']
     vmd_inp = open(vis_state, 'r')
