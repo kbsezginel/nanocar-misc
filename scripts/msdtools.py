@@ -7,6 +7,8 @@ import datetime
 import subprocess
 import numpy as np
 from angstrom import Trajectory
+import matplotlib
+matplotlib.use('agg')              # So it works on H2P ($DISPLAY variable is not defined)
 import matplotlib.pyplot as plt
 
 
