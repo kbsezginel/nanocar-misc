@@ -223,9 +223,11 @@ VMD movie generation
 """
 
 
-def vmd_movie(sim_dir, vis_state):
+def vmd_movie(sim_dir, vis_state, movie_file='movie.gif'):
     """ Generate VMD movie """
     cmd = ['vmd', '-dispdev', 'text', '-eofexit']
     vmd_inp = open(vis_state, 'r')
     subprocess.call(cmd, stdin=vmd_inp, cwd=sim_dir)
     vmd_inp.close()
+    # Consider adding this part to vis-state.vmd instead of doing the move here
+    os.rename(os.path.join(sim_dir, movie_file), os.path.join(report_dir, movie_file))

@@ -1,7 +1,19 @@
 """
 Nanocar LAMMPS simulation report.
+
+Usage:
+ >>> python sim_report.py /path/to/simulation /path/to/report
+or you can also give a simulation title:
+ >>> python sim_report.py /path/to/simulation /path/to/report sim-title
+
+Using with a bash script:
+reportdir='kutmatik/reports'
+simdir='/sim/dir'
+simtitle='kutmatik'
+python sim_report.py $simdir $reportdir $simtitle
 """
 import os
+import sys
 import datetime
 import numpy as np
 from angstrom import Trajectory
@@ -13,11 +25,14 @@ start_frame = 101   # Start reading from
 dt = 0.5            # femtoseconds
 time_unit = 'ns'    # time to convert
 sim_box = [39.08, 41.4506, 50]
-sim_dir = os.getcwd()
-save_dir = ''
-sim_title = os.path.basename(sim_dir)
 
-
+# Directories #####################################################
+sim_dir = os.path.abspath(sys.argv[1])
+save_dir = os.path.abspath(sys.argv[2])
+if len(sys.argv) > 3:
+    sim_title = str(sys.argv[3])
+else:
+    sim_title = os.path.basename(sim_dir)
 # Files ###########################################################
 traj_file = os.path.join(sim_dir, 'traj.xyz')
 csv_file = os.path.join(sim_dir, 'msd1.csv')
