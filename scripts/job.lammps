@@ -19,12 +19,20 @@ export I_MPI_FABRICS_LIST="ofa"
 srun --mpi=pmi2 lmp_mpi -in in.HtBDC_Cu110_UFF > lammps_out.txt
 
 # Create report
-reportdir='/ihome/cwilmer/kbs37/git/kutmatik/reports/tes'
+reportdir='/ihome/cwilmer/kbs37/git/kutmatik/reports'
+libdir='/ihome/cwilmer/kbs37/Nanocar/scripts'
 module purge
-module load gcc/5.4.0 imagemagick/7.0.7-22 vmd
 module load python/anaconda3.5-4.2.0
+module load gcc/5.4.0 imagemagick/7.0.7-22 vmd
 source activate pykbs
-python sim_report.py $SLURM_SUBMIT_DIR $reportdir $SBATCH_JOB_NAME
+python $libdir/sim_report.py $SLURM_SUBMIT_DIR $reportdir $SBATCH_JOB_NAME
+
+module load git/2.9.5
+cd $reportdir
+git pull
+git add .
+git commit -m "Add report -> $SBATCH_JOB_NAME"
+git push
 
 echo end_time: `date`
 exit
