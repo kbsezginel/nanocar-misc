@@ -218,6 +218,21 @@ def html_table(rows):
     return text
 
 
+def add_report_info(index_md, timestamp, sim_title, date):
+    """ Add link to report by creating table entry to index.md """
+    text = '  <tr>\n'
+    text += '    <td><a href="/reports/%s">%s</a></td>\n' % (timestamp, timestamp)
+    text += '    <td>%s</td>\n' % sim_title
+    text += '    <td>%s</td>\n' % date
+    text += '  </tr>\n'
+    with open(index_md, 'r') as rf:
+        report_lines = rf.readlines()
+    report_lines.insert(8, text)
+    with open(index_md, 'w') as rf:
+        for line in report_lines:
+            rf.write(line)
+
+
 """
 VMD movie generation
 """
