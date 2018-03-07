@@ -30,6 +30,7 @@ python $libdir/sim_report.py $SLURM_SUBMIT_DIR $reportdir $SBATCH_JOB_NAME
 
 module load git/2.9.5
 cd $reportdir
+python scripts/clean_reports.py
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/kutmatik_rsa
 git pull
