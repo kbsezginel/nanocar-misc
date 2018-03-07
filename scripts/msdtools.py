@@ -186,6 +186,10 @@ Angstrom MSD vs time
 -   Simulation directory: %s
 -   Report date: %s
 
+**Lammps Variables**
+
+%s
+
 #### Simulation files
 
 %s
@@ -204,12 +208,12 @@ def get_file_table(sim_dir):
     return html_table(rows)
 
 
-def html_table(rows):
-    """ Generate HTML table string using a list of rows (first one is headers) """
+def html_table(rows, header=True):
+    """ Generate HTML table string using a list of rows (first one is headers if header=True) """
     text = '<table>\n'
     for i, row in enumerate(rows):
         text += '  <tr>\n'
-        if i == 0:
+        if i == 0 and header:
             text += ''.join(['    <th>%s</th>\n' % col for col in row])
         else:
             text += ''.join(['    <td>%s</td>\n' % col for col in row])
@@ -246,3 +250,33 @@ def vmd_movie(sim_dir, report_dir, vis_state, movie_file='movie.gif'):
     vmd_inp.close()
     # Consider adding this part to vis-state.vmd instead of doing the move here
     os.rename(os.path.join(sim_dir, movie_file), os.path.join(report_dir, movie_file))
+
+
+"""
+LAMMPS simulation details
+"""
+
+
+def read_lammps_box(data_file):
+    """ Reads simulation box size **ORTHORHOMBIC ONLY** """
+    with open(data_file, 'r') as df:
+        data_lines = df.readlines()
+    sim_box = [0, 0, 0]
+    for line in data_lines:
+        for k, kwd in enumerate(['xlo xhi', 'ylo yhi', 'zlo zhi']):
+            if kwd in line:
+                sim_box[k] = float(line.split()[1]) - float(line.split()[0])
+    return sim_box
+
+
+def read_lammps_variables(inp_file, variables=['T', 'dt', 'txyz', 'seed']):
+    """ Reads variables listed in Lammps input file """
+    with open(inp_file, 'r') as inpf:
+        inp_lines = inpf.readlines()
+    lammps_variables = dict.fromkeys(variables)
+    for line in inp_lines:
+        if 'variable' in line:
+            for var in variables:
+                if line.split()[1] == var:
+                    lammps_variables[var] = line.split()[3]
+    return lammps_variables
