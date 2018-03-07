@@ -18,7 +18,7 @@ import sys
 import datetime
 import numpy as np
 from angstrom import Trajectory
-from msdtools import read_msd_data, read_lammps_msd_data, plot_msd
+from msdtools import filenames, read_msd_data, read_lammps_msd_data, plot_msd
 from msdtools import report_template, get_file_table, vmd_movie, add_report_info
 from msdtools import html_table, read_lammps_box, read_lammps_variables
 
@@ -41,14 +41,14 @@ else:
 img_dir = os.path.join(save_dir, 'assets', 'reports', report_ts)
 os.makedirs(img_dir, exist_ok=True)
 # Files ###########################################################
-traj_file = os.path.join(sim_dir, 'traj.xyz')
-csv_file = os.path.join(sim_dir, 'msd1.csv')
-traj_movie = os.path.join(img_dir, 'movie.gif')
-ang_plot = os.path.join(img_dir, 'msd-time-ang.png')
-lammps_plot = os.path.join(img_dir, 'msd-time-lammps.png')
+traj_file = os.path.join(sim_dir, filenames['trajectory'])
+csv_file = os.path.join(sim_dir, filenames['msd-csv'])
+traj_movie = os.path.join(img_dir, filenames['movie'])
+ang_plot = os.path.join(img_dir, filenames['msd-plot-ang'])
+lammps_plot = os.path.join(img_dir, filenames['msd-plot-lammps'])
+index_md = os.path.join(save_dir, filenames['index'])
 report_file = os.path.join(save_dir, '%s.md' % report_ts)
-index_md = os.path.join(save_dir, 'index.md')
-vis_state = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'vis-state.vmd')
+vis_state = os.path.join(os.path.abspath(os.path.dirname(__file__)), filenames['vmd-vis'])
 ###################################################################
 
 # Generate movie
@@ -73,7 +73,8 @@ plot_msd(lammps_data, save=lammps_plot)
 vartable = html_table(list(lammpsvar.items()), header=False)
 file_table = get_file_table(sim_dir)
 report_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-report = report_template % (sim_title, traj_movie, lammps_plot, ang_plot, sim_dir, report_date, vartable, file_table)
+report = report_template.format(title=sim_title, timestamp=report_ts, simdir=sim_dir,
+                                date=report_date, lammpsvar=vartable, simfiles=file_table)
 with open(report_file, 'w') as rep:
     rep.write(report)
 add_report_info(index_md, report_ts, sim_title, report_date)

@@ -12,6 +12,11 @@ matplotlib.use('agg')              # So it works on H2P ($DISPLAY variable is no
 import matplotlib.pyplot as plt
 
 
+filenames = {'movie': 'movie.gif', 'trajectory': 'traj.xyz',
+             'msd-csv': 'msd1.csv', 'index': 'index.md', 'vmd-vis': 'vis-state.vmd',
+             'msd-plot-ang': 'msd-time-ang.png', 'msd-plot-lammps': 'msd-time-lammps.png'}
+
+
 def read_msd(msd_file, dt=0.5, time_unit='ns'):
     """ Read csv formatted msd file (dt in femtoseconds) """
     time_conv = {'fs': 1, 'ps': 0.001, 'ns': 0.000001}
@@ -163,37 +168,37 @@ Markdown report template to be formatted. Add following sections (in order):
 """
 
 report_template = """
-%s
+{title}
 =======
 
 MSD Trajectory
 --------------
 
-![msd-traj](%s)
+![msd-traj](assets/reports/{timestamp}/%s)
 
 LAMMPS MSD vs time
 ------------------
 
-![lammps-msd](%s)
+![lammps-msd](assets/reports/{timestamp}/%s)
 
 Angstrom MSD vs time
 ------------------
 
-![ang-msd](%s)
+![ang-msd](assets/reports/{timestamp}/%s)
 
 ### Simulation details
 
--   Simulation directory: %s
--   Report date: %s
+-   Simulation directory: {simdir}
+-   Report date: {date}
 
 **Lammps Variables**
 
-%s
+{lammpsvar}
 
 #### Simulation files
 
-%s
-"""
+{simfiles}
+""" % (filenames['movie'], filenames['msd-plot-lammps'], filenames['msd-plot-ang'])
 
 
 def get_file_table(sim_dir):
