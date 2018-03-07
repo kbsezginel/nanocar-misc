@@ -7,7 +7,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --cluster=smp
 
-echo JOB_ID: $SBATCH_JOBID JOB_NAME: $SBATCH_JOB_NAME
+echo JOB_ID: $SLURM_JOB_ID JOB_NAME: $SLURM_JOB_NAME
 echo start_time: `date`
 cd $SLURM_SUBMIT_DIR
 module purge
@@ -26,7 +26,7 @@ module load python/anaconda3.5-4.2.0
 module load vmd/1.9.3
 module load gcc/5.4.0 imagemagick/7.0.7-22
 source activate pykbs
-python $libdir/sim_report.py $SLURM_SUBMIT_DIR $reportdir $SBATCH_JOB_NAME
+python $libdir/sim_report.py $SLURM_SUBMIT_DIR $reportdir $SLURM_JOB_NAME
 
 module load git/2.9.5
 cd $reportdir
@@ -35,7 +35,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/kutmatik_rsa
 git pull
 git add .
-git commit -m "Add report -> $SBATCH_JOB_NAME"
+git commit -m "Add report -> $SLURM_JOB_NAME"
 git push
 
 echo end_time: `date`
