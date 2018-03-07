@@ -20,7 +20,7 @@ srun --mpi=pmi2 lmp_mpi -in in.HtBDC_Cu110_UFF > lammps_out.txt
 
 # Create report
 reportdir='/ihome/cwilmer/kbs37/git/kutmatik/reports'
-libdir='/ihome/cwilmer/kbs37/Nanocar/scripts'
+libdir='/ihome/cwilmer/kbs37/git/Nanocar/scripts'
 module purge
 module load python/anaconda3.5-4.2.0
 module load vmd/1.9.3
