@@ -8,6 +8,7 @@ dev
 molecules/surfaces/Cu110/DC_Cu110
 molecules/surfaces/Cu110/HtBDC_Cu110
 kutmatik-token
+scripts/test
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
