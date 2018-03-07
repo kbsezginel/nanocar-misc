@@ -27,7 +27,7 @@ TO DO:
 - Start frame as system argument??
 """
 
-start_frame = 101   # Start reading from
+start_frame = 0     # Start reading from
 time_unit = 'ns'    # time to convert
 report_ts = str(datetime.datetime.now().timestamp())
 

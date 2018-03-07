@@ -92,10 +92,10 @@ def get_msd_vs_time(np_coor, timesteps, dt=0.5, time_unit='ns'):
     return msd_data
 
 
-def read_msd_data(traj_file, sim_box, start_frame=101, dt=0.5, time_unit='ns'):
+def read_msd_data(traj_file, sim_box, start_frame=0, dt=0.5, time_unit='ns'):
     """ Read MSD and diffusivity from simulation using Angstrom """
     traj = Trajectory(read=traj_file)
-    np_traj = traj.non_periodic([39.08, 41.4506, 50])
+    np_traj = traj.non_periodic(sim_box)
 
     np_coor = np_traj.coordinates[start_frame:, :, :]
     timesteps = [int(h.split('Timestep:')[1]) for h in traj.headers][start_frame:]
