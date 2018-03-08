@@ -16,6 +16,7 @@ Experimental Diffusion Results
 <table>
   <tr>
     <th>Molecule</th>
+    <th>Formula</th>
     <th>Surface</th>
     <th><i>E<sub>d</sub></i> (eV)</th>
     <th><i>h<sub>0</sub></i> (s<sup>-1</sup>)</th>
@@ -24,6 +25,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>DC</td>
+    <td>C<sub>36</sub>H<sub>18</sub></td>
     <td>Cu(1 1 0)</td>
     <td>0.74 ± 0.03 (hop)</td>
     <td>10<sup>13.9 ± 0.7</sup></td>
@@ -32,6 +34,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>HtBDC</td>
+    <td>C<sub>60</sub>H<sub>66</sub></td>
     <td>Cu(1 1 0)</td>
     <td>0.57 ± 0.02 (hop)</td>
     <td>10<sup>13.5 ± 0.4</sup></td>
@@ -40,6 +43,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>PVBA</td>
+    <td>C<sub>14</sub>H<sub>11</sub>O<sub>2</sub>N</td>
     <td>Pd(1 1 0)</td>
     <td>0.83 ± 0.03 </td>
     <td>10<sup>10.3 ± 0.4</sup></td>
@@ -47,6 +51,7 @@ Experimental Diffusion Results
     <th><a href="https://doi.org/10.1063/1.478430">2</a></th>
   </tr>
   <tr>
+    <td>C<sub>60</sub></td>
     <td>C<sub>60</sub></td>
     <td>Pd(1 1 0)</td>
     <td>1.40 ± 0.20</td>
@@ -56,6 +61,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>DNHD</td>
+    <td>C<sub>26</sub>H<sub>16</sub></td>
     <td>Cu(1 1 0)</td>
     <td>0.195</td>
     <td> - </td>
@@ -64,6 +70,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>TPEE</td>
+    <td>C<sub>34</sub>H<sub>20</sub></td>
     <td>Cu(1 1 0)</td>
     <td>0.175</td>
     <td> - </td>
@@ -72,6 +79,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>BtPHD</td>
+    <td>C<sub>26</sub>H<sub>28</sub></td>
     <td>Cu(1 1 0)</td>
     <td>0.325</td>
     <td> - </td>
@@ -80,6 +88,7 @@ Experimental Diffusion Results
   </tr>
   <tr>
     <td>Violet Lander</td>
+    <td>C<sub>108</sub>H<sub>104</sub></td>
     <td>Cu(1 1 0)</td>
     <td> - </td>
     <td> - </td>
@@ -96,6 +105,7 @@ Computational Diffusion Results
 <table>
   <tr>
     <th>Molecule</th>
+    <th>Formula</th>
     <th>Surface</th>
     <th><i>E<sub>d</sub></i> (eV)</th>
     <th><i>h<sub>0</sub></i> (s<sup>-1</sup>)</th>
@@ -104,6 +114,7 @@ Computational Diffusion Results
   </tr>
   <tr>
     <td>Carborane</td>
+    <td>C<sub>2</sub>H<sub>12</sub>B<sub>10</sub></td>
     <td>Au(0 0 1)</td>
     <td> - </td>
     <td> - </td>
@@ -112,6 +123,7 @@ Computational Diffusion Results
   </tr>
   <tr>
     <td>Violet Lander</td>
+    <td>C<sub>108</sub>H<sub>104</sub></td>
     <td>Cu(1 1 0)</td>
     <td> - </td>
     <td> - </td>
@@ -198,7 +210,7 @@ Molecules
           </iframe>
         </th>
         <th>
-          <iframe style="width: 200px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&smiles=C12C=C(C%23C/C(/C%23CC3=CC4C=CC=CC=4C=C3)=C(/C%23CC3=CC=C4C=CC=CC4=C3)\C%23CC3=CC4C=CC=CC=4C=C3)C=CC=1C=CC=C2&bg=white">
+          <iframe style="width: 200px; height: 300px;" frameborder="0" src="https://embed.molview.org/v1/?mode=balls&cid=11487187&bg=white">
           </iframe>
         </th>
         <th>
