@@ -1,0 +1,8 @@
+mol1:
+  asd: 123
+  ve: asd
+  x: [1, 2]
+mol2:
+  asd: 5432
+  jer: das
+  y: [3, 4]
