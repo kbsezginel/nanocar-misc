@@ -4,7 +4,7 @@ Au:
   vacuum: 0.0
 Cu:
   a: 3.597
-  size: [10, 15, 5]
+  size: [14, 20, 5]
   vacuum: 0.0
 Pd:
   a: 3.908
