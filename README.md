@@ -11,10 +11,10 @@ Usage
 -----
 
 Nanocars can be assembled by selecting a chassis and set of wheels.
-<p align="center"> <img src="assets/img/nanocar-build.PNG"> </p>
+<p align="center"> <img src="docs/assets/img/nanocar-build.PNG"> </p>
 
 ### Wheels
-<p align="center"> <img src="assets/img/wheels.png"> </p>
+<p align="center"> <img src="docs/assets/img/wheels.png"> </p>
 
 Several molecular wheels are available in nanocar library.
 -   [C60][C60]
