@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KBS Nanocar</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=3d);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=anaglyph);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=shadow-multiple);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&effect=emboss);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Quicksand:500);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+      body { font-family: 'Maven Pro'; }
+      h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+      .red { color: #8e1313; }
+      .gray {color: #606060; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .col2 {width: 50%; text-align: center; float:left}
+      .col3 {width: 33%; text-align: center; float:left}
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Molecular Diffusion
+## Mean Squared Displacement
+### .red[Kutay B. Sezginel]
+
+#### [Home](https://kbsezginel.github.io)
+
+---
+# Mean Squared Displacement
+
+Mean squared displacement is calculated using the formula below:
+
+<img src="assets/img/msd/msd_equation.png" alt="msd-equation" height=150>
+
+where N is the number of timesteps, r(t) is the position of particle at time t and dt is time delta.
+
+In order to understand the type of diffusion one can calculate MSD for different timedelta values
+and plot MSD vs dt.
+---
+### MSD vs dt
+
+The shape of the MSd vs dt curve gives information about the type of the motion of the particle.
+For true random walk (brownian motion) a linear line is expected.
+If there are other forces affecting the motion of the particle then different behaviours can be expected.
+
+<p align="center"><img src="assets/img/msd/msd_diffusion_types.svg" alt="msd-equation" height=300></p>
+
+---
+class: center, middle
+
+# <div class="font-effect-anaglyph">Thank you!<div>
+
+### [Home](https://kbsezginel.github.io)
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
