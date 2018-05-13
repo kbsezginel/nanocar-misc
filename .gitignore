@@ -10,6 +10,7 @@ molecules/surfaces/Cu110/HtBDC_Cu110
 kutmatik-token
 scripts/test
 lammps
+wham
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
