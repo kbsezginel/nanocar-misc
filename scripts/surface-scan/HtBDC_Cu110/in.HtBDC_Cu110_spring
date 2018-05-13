@@ -26,8 +26,8 @@ delete_bonds    surf multi remove
 pair_coeff      1 1 1.0 0.0
 
 # Modify surf - mol interactions
-variable        eps_CuC equal 5*sqrt(0.005*0.105)
-variable        eps_CuH equal 5*sqrt(0.005*0.044)
+variable        eps_CuC equal 500*sqrt(0.005*0.105)
+variable        eps_CuH equal 500*sqrt(0.005*0.044)
 variable        sig_CuC equal (3.113691+3.430851)/2
 variable        sig_CuH equal (3.113691+2.571134)/2
 pair_coeff      1 2 ${eps_CuC} ${sig_CuC}
