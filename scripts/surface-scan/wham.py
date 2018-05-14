@@ -5,9 +5,12 @@ import numpy as np
 import subprocess
 
 
-def run_wham(wham_args):
+def run_wham(wham_args, verbose=False):
     wham_args = [str(i) for i in wham_args]
-    subprocess.run(wham_args)
+    wham_process = subprocess.run(wham_args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if verbose:
+        stdout, stderr = wham_process.stdout.decode(), wham_process.stderr.decode()
+        print("Stdout:\n\n%s\nStderr:\n%s" % (stdout, stderr))
     return read_wham_out(wham_args[-1])
 
 
@@ -32,9 +35,9 @@ def write_timeseries_file(filename, time, position):
             f.write('%.2f  %.5f\n' % (t, p))
 
 
-def timesteps_to_time(timesteps, dt=1, conversion=1e-3):
+def timesteps_to_time(timesteps, dt=1, conversion=1e-3, shift=0):
     """ Convert time steps to time """
-    return np.array(timesteps) * dt * conversion
+    return ((np.array(timesteps) * dt * conversion) - shift)
 
 
 def write_data_file(filename, tsfile, minimum, spring):
