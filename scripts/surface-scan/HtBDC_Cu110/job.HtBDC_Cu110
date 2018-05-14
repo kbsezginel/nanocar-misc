@@ -3,7 +3,7 @@
 #SBATCH --job-name=HtBDC_Cu110
 #SBATCH --output=HtBDC_Cu110.out
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=6
+#SBATCH --ntasks-per-node=12
 #SBATCH --time=12:00:00
 #SBATCH --cluster=smp
 
@@ -20,4 +20,3 @@ srun --mpi=pmi2 lmp_mpi -in in.HtBDC_Cu110 > lammps_out.txt
 
 echo end_time: `date`
 exit
-

@@ -26,8 +26,8 @@ delete_bonds    surf multi remove
 pair_coeff      1 1 1.0 0.0
 
 # Modify surf - mol interactions
-variable        eps_CuC equal 5*sqrt(0.005*0.105)
-variable        eps_CuH equal 5*sqrt(0.005*0.044)
+variable        eps_CuC equal 50*sqrt(0.005*0.105)
+variable        eps_CuH equal 50*sqrt(0.005*0.044)
 variable        sig_CuC equal (3.113691+3.430851)/2
 variable        sig_CuH equal (3.113691+2.571134)/2
 pair_coeff      1 2 ${eps_CuC} ${sig_CuC}
@@ -45,7 +45,7 @@ thermo_style    custom step temp press etotal epair emol fmax fnorm c_C1[1] c_C1
 velocity        mol create $T ${seed} dist uniform
 
 ### Constrained NVT
-fix             NVT all nvt temp $T $T 100
-fix             SPRNG mol spring tether 5.0 21.582 22.8912 5.77 0.0
+fix             RIG mol rigid/nvt single temp $T $T 100
+fix             SPRNG mol spring tether 15.00 21.5820 22.8912 NULL 0.00
 run             5000000
-unfix           NVT
+unfix           RIG
