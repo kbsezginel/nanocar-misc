@@ -45,7 +45,7 @@ def write_job_file(jobfile, newjobfile, jobname, jobnameindex=2):
 
 
 def write_spring_input(inpfile, newinpfile, SPRING, springindex=48):
-    spring_fix = 'fix             SPRNG mol spring tether %.2f %.4f %.4f %.4f %.2f\n'
+    spring_fix = 'fix             SPRNG mol spring tether %.2f %.4f %.4f %s %.2f\n'
     with open(inpfile, 'r') as f:
         lines = f.readlines()
     lines[springindex] = spring_fix % (SPRING['k'], SPRING['xeq'], SPRING['yeq'], SPRING['zeq'], SPRING['r0'])
