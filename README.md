@@ -1,14 +1,6 @@
 Nanocar
 =======
-Python library for designing molecular cars.
-
-**The library is currently under development...**
-
-Installation
-------------
-
-Usage
------
+Python scripts and more for designing molecular cars.
 
 Nanocars can be assembled by selecting a chassis and set of wheels.
 <p align="center"> <img src="docs/assets/img/nanocar-build.PNG"> </p>
