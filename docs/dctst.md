@@ -11,6 +11,16 @@
   </tr>
 </table>
 
+### Rigid | 50eps | k: 100 | dx: 0.1 A | 5 ns (Scan 5)
+<p>
+  <details>
+    <summary><b>x-direction</b></summary>
+      <img src="assets/img/dctst/scan5-x-thermo.png">
+      <img src="assets/img/dctst/scan5-x-hist.png">
+      <img src="assets/img/dctst/scan5-x-wham.png">
+  </details>
+</p>
+
 ### Rigid | 50eps | k: 50 | dx: 0.1 A | 5 ns (Scan 4)
 <p>
   <details>
