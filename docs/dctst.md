@@ -17,6 +17,7 @@
     <summary><b>x-direction</b></summary>
       <img src="assets/img/dctst/scan4-x-thermo.png">
       <img src="assets/img/dctst/scan4-x-hist.png">
+      <img src="assets/img/dctst/scan4-x-wham.png">
   </details>
 </p>
 
@@ -25,6 +26,7 @@
     <summary><b>y-direction</b></summary>
       <img src="assets/img/dctst/scan4-y-thermo.png">
       <img src="assets/img/dctst/scan4-y-hist.png">
+      <img src="assets/img/dctst/scan4-y-wham.png">
 </details>
 </p>
 
@@ -35,6 +37,7 @@
     <summary><b>x-direction</b></summary>
       <img src="assets/img/dctst/scan3-x-thermo.png">
       <img src="assets/img/dctst/scan3-x-hist.png">
+      <img src="assets/img/dctst/scan3-x-wham.png">
   </details>
 </p>
 
@@ -43,5 +46,6 @@
     <summary><b>y-direction</b></summary>
       <img src="assets/img/dctst/scan3-y-thermo.png">
       <img src="assets/img/dctst/scan3-y-hist.png">
+      <img src="assets/img/dctst/scan3-y-wham.png">
 </details>
 </p>
