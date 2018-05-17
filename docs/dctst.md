@@ -1,0 +1,33 @@
+## HtBDC - Umbrella Sampling
+
+<table>
+  <tr>
+    <th>x-direction</th>
+    <th>y-direction</th>
+  </tr>
+  <tr>
+    <td><img src="assets/img/dctst/us-fcc-110-grid-x.png" width="150"></td>
+    <td><img src="assets/img/dctst/us-fcc-110-grid-y.png" width="150"></td>
+  </tr>
+</table>
+
+### Rigid | 50eps | k: 50 | dx: 0.1 A | 5 ns (Scan 4)
+
+#### x-direction
+<img src="assets/img/dctst/scan4-x-thermo.png">
+<img src="assets/img/dctst/scan4-x-hist.png">
+
+#### y-direction
+<img src="assets/img/dctst/scan4-y-thermo.png">
+<img src="assets/img/dctst/scan4-y-hist.png">
+
+
+### Rigid | 50eps | k: 10 | dx: 0.2 A | 5 ns (Scan 3)
+
+#### x-direction
+<img src="assets/img/dctst/scan3-x-thermo.png">
+<img src="assets/img/dctst/scan3-x-hist.png">
+
+#### y-direction
+<img src="assets/img/dctst/scan3-y-thermo.png">
+<img src="assets/img/dctst/scan3-y-hist.png">
