@@ -12,22 +12,36 @@
 </table>
 
 ### Rigid | 50eps | k: 50 | dx: 0.1 A | 5 ns (Scan 4)
+<p>
+  <details>
+    <summary><b>x-direction</b></summary>
+      <img src="assets/img/dctst/scan4-x-thermo.png">
+      <img src="assets/img/dctst/scan4-x-hist.png">
+  </details>
+</p>
 
-#### x-direction
-<img src="assets/img/dctst/scan4-x-thermo.png">
-<img src="assets/img/dctst/scan4-x-hist.png">
-
-#### y-direction
-<img src="assets/img/dctst/scan4-y-thermo.png">
-<img src="assets/img/dctst/scan4-y-hist.png">
-
+<p>
+  <details>
+    <summary><b>y-direction</b></summary>
+      <img src="assets/img/dctst/scan4-y-thermo.png">
+      <img src="assets/img/dctst/scan4-y-hist.png">
+</details>
+</p>
 
 ### Rigid | 50eps | k: 10 | dx: 0.2 A | 5 ns (Scan 3)
 
-#### x-direction
-<img src="assets/img/dctst/scan3-x-thermo.png">
-<img src="assets/img/dctst/scan3-x-hist.png">
+<p>
+  <details>
+    <summary><b>x-direction</b></summary>
+      <img src="assets/img/dctst/scan3-x-thermo.png">
+      <img src="assets/img/dctst/scan3-x-hist.png">
+  </details>
+</p>
 
-#### y-direction
-<img src="assets/img/dctst/scan3-y-thermo.png">
-<img src="assets/img/dctst/scan3-y-hist.png">
+<p>
+  <details>
+    <summary><b>y-direction</b></summary>
+      <img src="assets/img/dctst/scan3-y-thermo.png">
+      <img src="assets/img/dctst/scan3-y-hist.png">
+</details>
+</p>
