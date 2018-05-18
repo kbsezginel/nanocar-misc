@@ -11,6 +11,26 @@
   </tr>
 </table>
 
+### Rigid | 50eps | k: 500 | dx: 0.1 A | 5 ns (Scan 7)
+<p>
+  <details>
+    <summary><b>x-direction</b></summary>
+      <img src="assets/img/dctst/scan7-x-thermo.png">
+      <img src="assets/img/dctst/scan7-x-hist.png">
+      <img src="assets/img/dctst/scan7-x-wham.png">
+  </details>
+</p>
+
+### Rigid | 50eps | k: 200 | dx: 0.1 A | 5 ns (Scan 6)
+<p>
+  <details>
+    <summary><b>x-direction</b></summary>
+      <img src="assets/img/dctst/scan6-x-thermo.png">
+      <img src="assets/img/dctst/scan6-x-hist.png">
+      <img src="assets/img/dctst/scan6-x-wham.png">
+  </details>
+</p>
+
 ### Rigid | 50eps | k: 100 | dx: 0.1 A | 5 ns (Scan 5)
 <p>
   <details>
