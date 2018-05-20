@@ -53,7 +53,7 @@
 
 <p>
   <details>
-    <summary><b>x-direction</b></summary>
+    <summary><b>y-direction</b></summary>
       <img src="assets/img/dctst/scan5-y-thermo.png">
       <img src="assets/img/dctst/scan5-y-hist.png">
       <img src="assets/img/dctst/scan5-y-wham.png">
