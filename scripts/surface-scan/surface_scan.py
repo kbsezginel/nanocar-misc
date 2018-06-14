@@ -20,11 +20,12 @@ def read_datafile(datafile, skip_atoms=1400):
             element = element[:2]
         elements[line.split()[0]] = element
     n_atoms = atoms_end - atoms_start
-    atoms, coords = [], np.empty((n_atoms, 3))
+    atomids, atoms, coords = [], [], np.empty((n_atoms, 3))
     for i, line in enumerate(datalines[atoms_start:atoms_end]):
         coords[i] = np.array([float(i) for i in line.split()[4:7]])
         atoms.append(elements[line.split()[2]])
-    return atoms, coords
+        atomids.append(line.split()[2])
+    return atomids, atoms, coords
 
 
 def get_lammps_data_lines(coordinates, atoms, startid=1401):
@@ -35,11 +36,13 @@ def get_lammps_data_lines(coordinates, atoms, startid=1401):
     return lines
 
 
-def change_coordinates(datafile, newfile, newlines, start):
+def change_coordinates(datafile, newfile, newlines, skip_atoms=1400):
+    """ Change coordinates of the molecule in the data file. """
     with open(datafile, 'r') as f:
         datalines = f.readlines()
+    mol_start = datalines.index('Atoms\n') + skip_atoms + 2
     for i, line in enumerate(newlines):
-        datalines[start + i] = line
+        datalines[mol_start + i] = line
     with open(newfile, 'w') as nf:
         for line in datalines:
             nf.write(line)
