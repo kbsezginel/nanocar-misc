@@ -1,5 +1,5 @@
 """
-2D surface scan helper funcitons.
+2D surface scan helper functions.
 """
 import numpy as np
 
@@ -9,12 +9,22 @@ def read_datafile(datafile, skip_atoms=1400):
         datalines = f.readlines()
     atoms_start = datalines.index('Atoms\n') + 2 + skip_atoms
     atoms_end = datalines.index('Bonds\n') - 1
+    masses_start = datalines.index('Masses\n') + 2
+    masses_end = datalines.index('Bond Coeffs\n') - 1
+    elements = {}
+    for i, line in enumerate(datalines[masses_start:masses_end]):
+        element = line.split()[3]
+        if element[1] == '_':
+            element = element[0]
+        else:
+            element = element[:2]
+        elements[line.split()[0]] = element
     n_atoms = atoms_end - atoms_start
-    atomids, coords = [], np.empty((n_atoms, 3))
+    atoms, coords = [], np.empty((n_atoms, 3))
     for i, line in enumerate(datalines[atoms_start:atoms_end]):
         coords[i] = np.array([float(i) for i in line.split()[4:7]])
-        atomids.append(line.split()[2])
-    return atomids, coords
+        atoms.append(elements[line.split()[2]])
+    return atoms, coords
 
 
 def get_lammps_data_lines(coordinates, atoms, startid=1401):
