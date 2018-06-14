@@ -41,6 +41,24 @@
   </details>
 </p>
 
+<p>
+  <details>
+    <summary><b>y-direction</b></summary>
+      <img src="assets/img/dctst/scan6-y-thermo.png">
+      <img src="assets/img/dctst/scan6-y-hist.png">
+      <img src="assets/img/dctst/scan6-y-wham.png">
+  </details>
+</p>
+
+<p>
+  <details>
+    <summary><b>y-direction | eps: 100</b></summary>
+      <img src="assets/img/dctst/scan6-y-eps100-thermo.png">
+      <img src="assets/img/dctst/scan6-y-eps100-hist.png">
+      <img src="assets/img/dctst/scan6-y-eps100-wham.png">
+  </details>
+</p>
+
 ### Rigid | 50eps | k: 100 | dx: 0.1 A | 5 ns (Scan 5)
 <p>
   <details>
