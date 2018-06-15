@@ -52,6 +52,16 @@
 
 <p>
   <details>
+    <summary><b>y-direction 2.5 nearest neighbors</b></summary>
+      <img src="assets/img/dctst/scan6-y-long-thermo.png">
+      <img src="assets/img/dctst/scan6-y-long-hist.png">
+      <img src="assets/img/dctst/scan6-y-long-wham.png">
+  </details>
+</p>
+
+
+<p>
+  <details>
     <summary><b>y-direction | eps: 100</b></summary>
       <img src="assets/img/dctst/scan6-y-eps100-thermo.png">
       <img src="assets/img/dctst/scan6-y-eps100-hist.png">
