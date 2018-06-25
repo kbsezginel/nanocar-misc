@@ -11,6 +11,8 @@
   </tr>
 </table>
 
+### [3D Surface Energy Profile](htbdc_cu110_free_energy)
+
 ### Rigid | 50eps | k: 1000 | dx: 0.1 A | 5 ns (Scan 8)
 <p>
   <details>
