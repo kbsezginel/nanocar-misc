@@ -11,7 +11,25 @@
   </tr>
 </table>
 
-### [3D Surface Energy Profile](htbdc_cu110_free_energy)
+## 3D Surface Energy
+
+### [1D WHAM Energy Profiles](htbdc_cu110_free_energy_1d)
+
+### [2D WHAM Energy Profile](htbdc_cu110_free_energy_2d)
+
+### Calculating Overall Activation Energy
+The overall activation energy for diffusion in a given direction can be calculated by averaging
+different energy profiles (parallel) in that direction. Assuming Boltzmann distribution, we can calculate
+probabilities for each energy profile. The probability of taking each pathway is related to it's
+activation energy exponentially. Therefore we first take the activation energy for each pathway and
+calculate probability for that pathway as follows:
+
+<p align="center"><img src="assets/img/dctst/eqn_state_probability.png" width="250"></p>
+
+After calculating probabilities for each pathway in the desired direction we can then multiply the
+activation energies with the probabilities to get the average activation energy as follows:
+
+<p align="center"><img src="assets/img/dctst/eqn_average_energy.png" width="250"></p>
 
 ### Rigid | 50eps | k: 1000 | dx: 0.1 A | 5 ns (Scan 8)
 <p>
