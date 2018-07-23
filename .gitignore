@@ -1,3 +1,9 @@
+# Surface Scan
+surface-scan/docs
+surface-scan/analysis/surface-plot/*.html
+surface-scan/analysis/surface-plot/*.yaml
+surface-scan/analysis/wham/run*
+
 # GitHub Pages
 _site
 Gemfile.lock
@@ -10,7 +16,6 @@ molecules/surfaces/Cu110/HtBDC_Cu110
 kutmatik-token
 scripts/test
 lammps
-wham
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
