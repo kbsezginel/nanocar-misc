@@ -10,7 +10,7 @@ from bokeh.io import save
 
 
 ####################################################################################################
-SCAN = 'DC_Cu110-2d'
+SCAN = input('Enter scan name: ')
 with open('%s-data.yaml' % SCAN, 'r') as yf:
     DATA = yaml.load(yf)
 X, Y, Z = np.array(DATA['x']), np.array(DATA['y']), np.array(DATA['z'])
@@ -22,7 +22,7 @@ import * as p from "core/properties"
 import {LayoutDOM, LayoutDOMView} from "models/layouts/layout_dom"
 
 OPTIONS =
-  width:  '800px'
+  width:  '1200px'
   height: '800px'
   style: 'surface'
   showPerspective: true
@@ -108,6 +108,6 @@ class Surface3d(LayoutDOM):
 
 
 source = ColumnDataSource(data=dict(x=X, y=Y, z=Z))
-surface = Surface3d(x="x", y="y", z="z", data_source=source, width=800, height=800)
+surface = Surface3d(x="x", y="y", z="z", data_source=source)
 save(surface)
 os.rename('bokeh_surf.html', '%s.html' % SCAN)
