@@ -1,4 +1,10 @@
-## HtBDC - Umbrella Sampling
+## Dynamically Corrected Transition State Theory (dcTST)
+
+In order to estimate diffusion transition state theory could be used with umbrella sampling.
+For the unit cell of a Cu(110) surface we can divide the surface into grid points and
+constrain our molecule to the grid point using a spring.
+Then using Weighted Histogram Analysis Method (WHAM) we can calculate the free energy barrier
+for diffusion in each direction.
 
 <table>
   <tr>
