@@ -28,6 +28,24 @@ def read_wham_out(filename):
     return data
 
 
+def read_wham_out_list(filename):
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+    data = []
+    scan_data = dict(x=[], y=[], free=[], prob=[])
+    for line in lines[1:]:
+        ls = line.split()
+        if len(ls) == 0:
+            data.append(scan_data)
+            scan_data = dict(x=[], y=[], free=[], prob=[])
+        elif len(ls) > 0:
+            scan_data['x'].append(float(ls[0]))
+            scan_data['y'].append(float(ls[1]))
+            scan_data['free'].append(float(ls[2]))
+            scan_data['prob'].append(float(ls[3]))
+    return data
+
+
 def write_timeseries_file(filename, time, position_x, position_y):
     with open(filename, 'w') as f:
         for t, px, py in zip(time, position_x, position_y):
