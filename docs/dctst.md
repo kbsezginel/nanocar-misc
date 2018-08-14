@@ -6,16 +6,12 @@ constrain our molecule to the grid point using a spring.
 Then using Weighted Histogram Analysis Method (WHAM) we can calculate the free energy barrier
 for diffusion in each direction.
 
-<table>
-  <tr>
-    <th>x-direction</th>
-    <th>y-direction</th>
-  </tr>
-  <tr>
-    <td><img src="assets/img/dctst/us-fcc-110-grid-x.png" width="150"></td>
-    <td><img src="assets/img/dctst/us-fcc-110-grid-y.png" width="150"></td>
-  </tr>
-</table>
+<p align="center"><img src="assets/img/dctst/umbrella-sampling-energy-barrier.png" width="600"></p>
+
+Above, on the left the grid points on the Cu(110) surface is shown.
+For each point an MD simulation is performed.
+Then 2D WHAM analysis is used to calculate free energy barriers for moving between these points.
+
 
 ## 3D Surface Energy
 
