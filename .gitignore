@@ -2,7 +2,8 @@
 surface-scan/docs
 surface-scan/analysis/surface-plot/*.html
 surface-scan/analysis/surface-plot/*.yaml
-surface-scan/analysis/wham/run*
+surface-scan/analysis/dctst/run*
+surface-scan/analysis/dctst/plots
 
 # GitHub Pages
 _site
