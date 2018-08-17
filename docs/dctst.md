@@ -12,13 +12,6 @@ Above, on the left the grid points on the Cu(110) surface is shown.
 For each point an MD simulation is performed.
 Then 2D WHAM analysis is used to calculate free energy barriers for moving between these points.
 
-
-## 3D Surface Energy
-
-### [1D WHAM Energy Profiles](htbdc_cu110_free_energy_1d)
-
-### [2D WHAM Energy Profile](htbdc_cu110_free_energy_2d)
-
 ### Calculating Overall Activation Energy
 The overall activation energy for diffusion in a given direction can be calculated by averaging
 different energy profiles (parallel) in that direction. Assuming Boltzmann distribution, we can calculate
@@ -33,118 +26,227 @@ activation energies with the probabilities to get the average activation energy 
 
 <p align="center"><img src="assets/img/dctst/eqn_average_energy.png" width="250"></p>
 
-### Rigid | 50eps | k: 1000 | dx: 0.1 A | 5 ns (Scan 8)
-<p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan8-x-thermo.png">
-      <img src="assets/img/dctst/scan8-x-hist.png">
-      <img src="assets/img/dctst/scan8-x-wham.png">
-  </details>
-</p>
+## Free Energy Barriers
 
-### Rigid | 50eps | k: 500 | dx: 0.1 A | 5 ns (Scan 7)
-<p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan7-x-thermo.png">
-      <img src="assets/img/dctst/scan7-x-hist.png">
-      <img src="assets/img/dctst/scan7-x-wham.png">
-  </details>
-</p>
+### Linear Energy Barriers (y) - 2D WHAM
 
-### Rigid | 50eps | k: 200 | dx: 0.1 A | 5 ns (Scan 6)
 <p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan6-x-thermo.png">
-      <img src="assets/img/dctst/scan6-x-hist.png">
-      <img src="assets/img/dctst/scan6-x-wham.png">
-  </details>
+    <details>
+      <summary><b>DC</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/DC_Cu110-barriers.png">
+    </details>
 </p>
 
 <p>
-  <details>
-    <summary><b>y-direction</b></summary>
-      <img src="assets/img/dctst/scan6-y-thermo.png">
-      <img src="assets/img/dctst/scan6-y-hist.png">
-      <img src="assets/img/dctst/scan6-y-wham.png">
-  </details>
+    <details>
+      <summary><b>HtBDC</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/HtBDC_Cu110-barriers.png">
+    </details>
 </p>
 
 <p>
-  <details>
-    <summary><b>y-direction 2.5 nearest neighbors</b></summary>
-      <img src="assets/img/dctst/scan6-y-long-thermo.png">
-      <img src="assets/img/dctst/scan6-y-long-hist.png">
-      <img src="assets/img/dctst/scan6-y-long-wham.png">
-  </details>
+    <details>
+      <summary><b>C60</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/C60_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>PCARBORANE</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/PCARBORANE_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>BtPHD</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/BtPHD_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>DNHD</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/DNHD_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>PVBA</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/PVBA_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>TPEE</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/TPEE_Cu110-barriers.png">
+    </details>
+</p>
+
+<p>
+    <details>
+      <summary><b>VL</b></summary>
+        <img src="assets/img/dctst/2D-wham-barrier-y/VL_Cu110-barriers.png">
+    </details>
+</p>
+
+### 3D Energy Surfaces
+
+## Position Histograms
+
+### WHAM 2D x and y histograms
+
+<p>
+    <details>
+      <summary><b>DC</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/DC_Cu110-xy-hist.png">
+    </details>
 </p>
 
 
 <p>
-  <details>
-    <summary><b>y-direction | eps: 100</b></summary>
-      <img src="assets/img/dctst/scan6-y-eps100-thermo.png">
-      <img src="assets/img/dctst/scan6-y-eps100-hist.png">
-      <img src="assets/img/dctst/scan6-y-eps100-wham.png">
-  </details>
+    <details>
+      <summary><b>HtBDC</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/HtBDC_Cu110-xy-hist.png">
+    </details>
 </p>
 
-### Rigid | 50eps | k: 100 | dx: 0.1 A | 5 ns (Scan 5)
-<p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan5-x-thermo.png">
-      <img src="assets/img/dctst/scan5-x-hist.png">
-      <img src="assets/img/dctst/scan5-x-wham.png">
-  </details>
-</p>
 
 <p>
-  <details>
-    <summary><b>y-direction</b></summary>
-      <img src="assets/img/dctst/scan5-y-thermo.png">
-      <img src="assets/img/dctst/scan5-y-hist.png">
-      <img src="assets/img/dctst/scan5-y-wham.png">
-  </details>
+    <details>
+      <summary><b>C60</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/C60_Cu110-xy-hist.png">
+    </details>
 </p>
 
-### Rigid | 50eps | k: 50 | dx: 0.1 A | 5 ns (Scan 4)
-<p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan4-x-thermo.png">
-      <img src="assets/img/dctst/scan4-x-hist.png">
-      <img src="assets/img/dctst/scan4-x-wham.png">
-  </details>
-</p>
 
 <p>
-  <details>
-    <summary><b>y-direction</b></summary>
-      <img src="assets/img/dctst/scan4-y-thermo.png">
-      <img src="assets/img/dctst/scan4-y-hist.png">
-      <img src="assets/img/dctst/scan4-y-wham.png">
-</details>
+    <details>
+      <summary><b>PCARBORANE</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/PCARBORANE_Cu110-xy-hist.png">
+    </details>
 </p>
 
-### Rigid | 50eps | k: 10 | dx: 0.2 A | 5 ns (Scan 3)
 
 <p>
-  <details>
-    <summary><b>x-direction</b></summary>
-      <img src="assets/img/dctst/scan3-x-thermo.png">
-      <img src="assets/img/dctst/scan3-x-hist.png">
-      <img src="assets/img/dctst/scan3-x-wham.png">
-  </details>
+    <details>
+      <summary><b>BtPHD</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/BtPHD_Cu110-xy-hist.png">
+    </details>
 </p>
 
+
 <p>
-  <details>
-    <summary><b>y-direction</b></summary>
-      <img src="assets/img/dctst/scan3-y-thermo.png">
-      <img src="assets/img/dctst/scan3-y-hist.png">
-      <img src="assets/img/dctst/scan3-y-wham.png">
-</details>
+    <details>
+      <summary><b>DNHD</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/DNHD_Cu110-xy-hist.png">
+    </details>
 </p>
+
+
+<p>
+    <details>
+      <summary><b>PVBA</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/PVBA_Cu110-xy-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>TPEE</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/TPEE_Cu110-xy-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>VL</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/VL_Cu110-xy-hist.png">
+    </details>
+</p>
+
+
+### 2D position histograms
+
+<p>
+    <details>
+      <summary><b>DC</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/DC_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>HtBDC</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/HtBDC_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>C60</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/C60_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>PCARBORANE</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/PCARBORANE_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>BtPHD</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/BtPHD_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>DNHD</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/DNHD_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>PVBA</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/PVBA_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>TPEE</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/TPEE_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+<p>
+    <details>
+      <summary><b>VL</b></summary>
+        <img src="assets/img/dctst/2D-pos-hist/VL_Cu110-surf-hist.png">
+    </details>
+</p>
+
+
+## 3D Surface Energy
+
+### [1D WHAM Energy Profiles](htbdc_cu110_free_energy_1d)
+
+### [2D WHAM Energy Profile](htbdc_cu110_free_energy_2d)
