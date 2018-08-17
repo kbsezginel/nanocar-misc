@@ -95,6 +95,16 @@ activation energies with the probabilities to get the average activation energy 
 
 ### 3D Energy Surfaces
 
+-   **[DC_Cu110](energy-surface/DC_Cu110-2d)**
+-   **[HtBDC_Cu110](energy-surface/HtBDC_Cu110-2d)**
+-   **[C60_Cu110](energy-surface/C60_Cu110-2d)**
+-   **[PCARBORANE_Cu110](energy-surface/PCARBORANE_Cu110-2d)**
+-   **[BtPHD_Cu110](energy-surface/BtPHD_Cu110-2d)**
+-   **[DNHD_Cu110](energy-surface/DNHD_Cu110-2d)**
+-   **[PVBA_Cu110](energy-surface/PVBA_Cu110-2d)**
+-   **[TPEE_Cu110](energy-surface/TPEE_Cu110-2d)**
+-   **[VL_Cu110](energy-surface/VL_Cu110-2d)**
+
 ## Position Histograms
 
 ### WHAM 2D x and y histograms
@@ -243,10 +253,3 @@ activation energies with the probabilities to get the average activation energy 
         <img src="assets/img/dctst/2D-pos-hist/VL_Cu110-surf-hist.png">
     </details>
 </p>
-
-
-## 3D Surface Energy
-
-### [1D WHAM Energy Profiles](htbdc_cu110_free_energy_1d)
-
-### [2D WHAM Energy Profile](htbdc_cu110_free_energy_2d)
