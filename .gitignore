@@ -5,6 +5,9 @@ surface-scan/analysis/surface-plot/*.yaml
 surface-scan/analysis/dctst/run*
 surface-scan/analysis/dctst/plots
 
+# Diffusion
+diffusion/docs
+
 # GitHub Pages
 _site
 Gemfile.lock
