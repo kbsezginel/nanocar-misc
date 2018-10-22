@@ -15,7 +15,7 @@ verbose: true                    # Verbosity of Blender
 pickle: 'temp-config.pkl'        # Temporary pickle file
 executable: 'blender'            # Blender executable (see documentation for setup)
 camera:
-  location: [0, 0, 10]           # Camera location (x, y, z)
+  location: [0, 0, 20]           # Camera location (x, y, z)
   rotation: [0, 0, 0]            # Camera rotation in degrees
   type: 'ORTHO'                  # Camera type ('ORTHO' | 'PERSP')
   zoom: 55                       # Camera zoom (scale)
